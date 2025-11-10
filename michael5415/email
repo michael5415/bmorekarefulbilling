@@ -1,0 +1,50 @@
+<form method="POST" action="https://formspree.io/f/abcd1234" accept-charset="UTF-8">
+  <input type="hidden" name="_subject" value="New Intake — Bmorekarefulbilling">
+  <input type="hidden" name="_template" value="table">
+
+  <div class="row">
+    <div>
+      <label for="name">Full Name</label>
+      <input id="name" name="name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" required>
+    </div>
+    <div>
+      <label for="practice">Practice / Organization</label>
+      <input id="practice" name="practice" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div>
+      <label for="specialty">Specialty</label>
+      <select id="specialty" name="specialty">
+        <option>Primary Care</option>
+        <option>Behavioral Health</option>
+        <option>Dental</option>
+        <option>Physical Therapy</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div>
+      <label for="emr">EMR / Billing System</label>
+      <input id="emr" name="emr">
+    </div>
+  </div>
+
+  <div>
+    <label for="notes">What services do you need?</label>
+    <textarea id="notes" name="notes" rows="5"></textarea>
+  </div>
+
+  <button type="submit">Submit Intake</button>
+</form>
