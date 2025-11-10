@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bmorekarefulbilling LLC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">Bmorekarefulbilling</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Precision Medical Billing for Healthcare Professionals</h1>
+    <p>Maximize your revenue with 99% claim accuracy and personalized support.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Bmorekarefulbilling LLC is a medical billing company based in Baltimore, MD. Founded by Michael Henderson, MBA, we specialize in claim submission, denial management, and RCM solutions that boost cash flow and compliance.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul class="service-grid">
+      <li><i class="fas fa-file-invoice-dollar"></i> Claim Submission</li>
+      <li><i class="fas fa-user-md"></i> Denial Management</li>
+      <li><i class="fas fa-laptop-medical"></i> RCM Optimization</li>
+      <li><i class="fas fa-dna"></i> Coding & Compliance (Coming Soon)</li>
+    </ul>
+  </section>
+
+  <section id="why">
+    <h2>Why Choose Us?</h2>
+    <p>✔️ 99% Claim Accuracy<br>✔️ HIPAA-Compliant Tech<br>✔️ Dedicated Account Manager<br>✔️ Transparent Reports & KPIs</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/YOUR_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="How can we help?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bmorekarefulbilling LLC | Baltimore, MD</p>
+  </footer>
+
+</body>
+</html>
