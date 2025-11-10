@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bmorekarefulbilling LLC</title>
+  <meta name="description" content="Precise, compliant medical billing services. Claim submission, denial management, patient billing, and full revenue cycle management.">
+  <link rel="icon" href="assets/logo.svg">
+  <style>
+    :root{
+      --brand:#0a1a3f;
+      --accent:#00a8b5;
+      --muted:#f5f8fa;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--muted);color:#1a1a1a;line-height:1.55}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* Header/Nav */
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(10,26,63,.96);backdrop-filter:saturate(180%) blur(8px);color:#fff}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .nav .links a{color:#fff;margin-left:18px;font-weight:600}
+    .nav .cta{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;margin-left:18px}
+    .brand{display:flex;align-items:center;gap:10px;color:#fff}
+    .brand img{height:32px}
+    /* Hero */
+    .hero{position:relative;background:var(--brand);color:#fff}
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(180deg, rgba(10,26,63,.70), rgba(10,26,63,.75)),
+                 url('assets/hero.jpg') center/cover no-repeat;
+      filter: saturate(1);
+    }
+    .hero .inner{position:relative;padding:80px 0}
+    .hero h1{font-size:2.4rem;margin:0 0 10px}
+    .hero p{font-size:1.1rem;max-width:760px;margin:0}
+    .hero .actions{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:700}
+    .btn.primary{background:var(--accent);color:#fff}
+    .btn.secondary{background:#ffffff;color:var(--brand)}
+    /* Sections */
+    section{padding:64px 0}
+    h2{color:var(--brand);margin:0 0 18px}
+    .card{background:var(--card);border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:22px}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media(max-width:900px){.grid.cols-3{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+    /* Pricing */
+    .price{font-size:2rem;font-weight:800;color:var(--brand);margin:8px 0}
+    .small{color:#555;font-size:.95rem}
+    /* Footer */
+    footer{background:var(--brand);color:#fff;padding:26px 0;margin-top:30px}
+    .contact-block p{margin:6px 0}
+    /* Form */
+    form input, form textarea, form select{
+      width:100%;padding:12px 12px;border:1px solid #e5e7eb;border-radius:10px;background:#fff;
+    }
+    form label{font-weight:700;color:#1f2937;display:block;margin-bottom:6px}
+    form .row{display:grid;gap:16px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media(max-width:720px){form .row{grid-template-columns:1fr}}
+    form button{background:var(--accent);color:#fff;border:0;padding:12px 16px;border-radius:10px;font-weight:800;cursor:pointer}
+    .badge{display:inline-block;background:#e8f5ff;color:#064e63;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.85rem}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Bmorekarefulbilling logo">
+        <strong>Bmorekarefulbilling LLC</strong>
+      </div>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#portal">Client Portal</a>
+        <a href="#contact" class="cta">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container inner">
+      <span class="badge">Precision • Compliance • Results</span>
+      <h1>Medical Billing that boosts cash flow & reduces denials</h1>
+      <p>Experienced revenue cycle support for physicians, specialists, and outpatient clinics. We submit clean claims fast, manage denials end‑to‑end, and keep your A/R days low—with transparent reporting every month.</p>
+      <div class="actions">
+        <a class="btn primary" href="#portal">Start Intake</a>
+        <a class="btn secondary" href="#services">See Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Claim Submission & Follow‑Up</h3>
+          <p>Accurate claim creation and rapid submission within 2 business days of complete documentation, plus proactive payer follow‑up until resolution.</p>
+        </div>
+        <div class="card">
+          <h3>Patient Billing & Collections</h3>
+          <p>Clear statements, payment posting, and professional collection workflows that protect patient relationships.</p>
+        </div>
+        <div class="card">
+          <h3>Denial Management</h3>
+          <p>Root‑cause analysis, appeals, and corrective actions to prevent repeat denials.</p>
+        </div>
+        <div class="card">
+          <h3>Revenue Cycle Management</h3>
+          <p>End‑to‑end visibility with monthly performance reports and KPI tracking.</p>
+        </div>
+        <div class="card">
+          <h3>Future: Coding & Compliance</h3>
+          <p>Planned expansion into medical coding and compliance consulting to further improve accuracy and speed.</p>
+        </div>
+        <div class="card">
+          <h3>Security & HIPAA</h3>
+          <p>Secure data practices and confidentiality aligned with HIPAA requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="container">
+      <h2>Simple, transparent pricing</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Starter</h3>
+          <p class="price">$625<span class="small">/mo per provider</span></p>
+          <ul>
+            <li>Clean claim submission</li>
+            <li>Basic denial follow‑up</li>
+            <li>Monthly KPI snapshot</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Growth</h3>
+          <p class="price">$833<span class="small">/mo per provider</span></p>
+          <ul>
+            <li>Advanced denial management</li>
+            <li>Patient billing & statements</li>
+            <li>Monthly KPI + recommendations</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pro</h3>
+          <p class="price">$926<span class="small">/mo per provider</span></p>
+          <ul>
+            <li>Full RCM support</li>
+            <li>Appeals & root‑cause prevention</li>
+            <li>Custom reports & reviews</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small">Need volume pricing or a hybrid percentage model? <a href="#contact">Get a custom quote</a>.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h2>About Bmorekarefulbilling</h2>
+        <p>Founded by Michael Henderson, MBA, our mission is to deliver precise, efficient, and reliable billing that optimizes financial performance for healthcare providers. We aim for 99% claim accuracy, fast submission, and client satisfaction.</p>
+        <p>We support small to mid‑sized practices and specialty clinics across Maryland and beyond.</p>
+      </div>
+      <div class="card">
+        <h2>What you can expect</h2>
+        <ul>
+          <li>Clean claims within 2 business days of complete documentation</li>
+          <li>Proactive payer follow‑ups & denial prevention</li>
+          <li>Transparent monthly reporting (A/R days, denial rates, net collections)</li>
+          <li>Secure and compliant handling of PHI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="portal">
+    <div class="container">
+      <h2>Client Portal – Intake Form</h2>
+      <div class="card">
+        <form method="POST" action="https://formspree.io/f/your-form-id">
+          <div class="row">
+            <div>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@practice.com" required>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" placeholder="410‑279‑1464" required>
+            </div>
+            <div>
+              <label for="practice">Practice / Organization</label>
+              <input id="practice" name="practice" placeholder="Practice name" required>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="specialty">Specialty</label>
+              <select id="specialty" name="specialty">
+                <option>Primary Care</option>
+                <option>Behavioral Health</option>
+                <option>Dental</option>
+                <option>Physical Therapy</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="emr">EMR / Billing System</label>
+              <input id="emr" name="emr" placeholder="Epic, Kareo, Waystar, IDX, etc.">
+            </div>
+          </div>
+          <div>
+            <label for="notes">What services do you need?</label>
+            <textarea id="notes" name="notes" rows="5" placeholder="Tell us about your needs (e.g., claim submission, denial management, RCM, patient billing)"></textarea>
+          </div>
+          <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
+            <button type="submit">Submit Intake</button>
+            <span class="small">We’ll reply within 24 hours.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container grid cols-2">
+      <div class="card contact-block">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:bmorekarefulbill@yahoo.com">bmorekarefulbill@yahoo.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+14102791464">410-279-1464</a></p>
+        <p><strong>Location:</strong> Baltimore, Maryland</p>
+        <p class="small">Business hours: Mon–Fri, 9am–5pm ET</p>
+      </div>
+      <div class="card">
+        <h2>Why practices choose us</h2>
+        <ul>
+          <li>99% claim accuracy goal</li>
+          <li>Fast submission & diligent follow‑up</li>
+          <li>Transparent reporting & insights</li>
+          <li>Personalized, responsive support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Bmorekarefulbilling LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
