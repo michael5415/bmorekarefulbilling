@@ -1,0 +1,7 @@
+<picture>
+  <source srcset="/assets/logo.svg" type="image/svg+xml">
+  <img src="/assets/logo.png" alt="Bmorekarefulbilling" width="160" height="auto">
+</picture>
+<link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/logo.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
