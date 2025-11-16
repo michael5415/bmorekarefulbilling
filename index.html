@@ -1,86 +1,558 @@
-<section class="hero" id="home">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bmorekarefulbilling LLC — Medical Billing & RCM That Boosts Cash Flow</title>
+  <meta name="description" content="RCM experts for outpatient providers. Clean claims in 2 days, proactive denial management, transparent KPIs, HIPAA-aligned. Start your intake today." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
 
-  <!-- Background Video -->
-  <div class="hero-video-wrap">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="assets/hero-loop.mp4" type="video/mp4">
-      <source src="assets/hero-loop.webm" type="video/webm">
-    </video>
+  <meta property="og:title" content="Bmorekarefulbilling LLC — Medical Billing & RCM" />
+  <meta property="og:description" content="Clean claims fast. Fewer denials. Clear KPIs. Start your intake today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bmorekarefulbill.com/" />
+  <meta property="og:image" content="https://bmorekarefulbill.com/assets/hero-med-tech.jpg" />
+
+  <style>
+    :root{
+      --brand:#0a1a3f; /* navy */
+      --accent:#00a8b5; /* turquoise */
+      --ink:#e5e7eb;
+      --muted:#020617;
+      --card:#02091f;
+      --ring: rgba(0,168,181,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--ink);
+      background:radial-gradient(circle at 0 0,rgba(56,189,248,.16),transparent 55%), #020617;
+      line-height:1.6;
+    }
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    /* Topbar */
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(12px) saturate(140%);
+      background:rgba(3,7,18,.92);
+      border-bottom:1px solid rgba(148,163,184,.2);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand-wrap{display:flex;align-items:center;gap:10px;color:#e5e7eb;font-weight:800;font-size:.95rem;}
+    .brand-wrap img{height:26px;width:auto;display:block}
+    .links{display:flex;align-items:center;gap:18px;font-size:.88rem;}
+    .links a{color:#e5e7eb;opacity:.9;font-weight:500}
+    .links a.cta-link{
+      padding:8px 14px;border-radius:999px;
+      background:linear-gradient(135deg,#00e0ff,#22c55e);
+      color:#020617;font-weight:800;
+      box-shadow:0 16px 45px rgba(8,47,73,.9);
+    }
+    @media(max-width:820px){
+      .links{display:none;}
+    }
+
+    /* HERO (SIMPLE IMAGE BACKGROUND) */
+    .hero{
+      position:relative;
+      color:#e5e7eb;
+      overflow:hidden;
+      background:#020617;
+    }
+    .hero-media{
+      position:absolute;inset:0;z-index:0;overflow:hidden;
+    }
+    .hero-media img{
+      width:100%;height:100%;object-fit:cover;
+      filter:saturate(1.05) contrast(1.05) brightness(.85);
+      transform:scale(1.02);
+    }
+    .hero-overlay{
+      position:absolute;inset:0;z-index:1;
+      background:
+        linear-gradient(to bottom,rgba(3,7,18,.5),rgba(3,7,18,.95)),
+        radial-gradient(circle at 0 0,rgba(56,189,248,.35),transparent 60%);
+    }
+    .hero-inner{
+      position:relative;z-index:2;
+      max-width:1120px;margin:0 auto;
+      padding:90px 20px 80px;
+      display:grid;grid-template-columns:1.15fr .9fr;gap:34px;
+    }
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;padding:76px 20px 70px;}
+    }
+    .hero-tagline{
+      font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;
+      color:#a5f3fc;margin-bottom:10px;
+    }
+    .hero h1{
+      font-size:clamp(2.1rem,3.4vw,3.2rem);
+      line-height:1.12;font-weight:900;
+      text-shadow:0 0 30px rgba(0,0,0,.9);
+      margin-bottom:10px;
+    }
+    .hero-sub{font-size:1rem;max-width:540px;color:#d1d5db;margin-bottom:18px;}
+
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px;}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:11px 18px;border-radius:999px;
+      font-weight:800;font-size:.9rem;border:0;cursor:pointer;
+      text-decoration:none;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#00e0ff,#22c55e);
+      color:#020617;box-shadow:0 20px 70px rgba(8,47,73,.9);
+    }
+    .btn-outline{
+      border:1px solid rgba(148,163,184,.7);
+      background:rgba(15,23,42,.85);
+      color:#e5e7eb;
+    }
+
+    .hero-metrics{
+      display:flex;flex-wrap:wrap;gap:14px;
+      font-size:.85rem;color:#9ca3af;
+    }
+    .hero-metrics strong{display:block;font-size:1.1rem;color:#e5e7eb;}
+
+    .hero-side{display:flex;flex-direction:column;gap:16px;align-items:flex-end;}
+    @media(max-width:900px){.hero-side{align-items:flex-start;}}
+    .hero-side-card{
+      width:100%;max-width:340px;
+      border-radius:20px;
+      background:radial-gradient(circle at top,#02091f,#020617);
+      border:1px solid rgba(37,99,235,.8);
+      box-shadow:0 26px 80px rgba(15,23,42,.98);
+      padding:14px 14px 12px;
+      font-size:.82rem;
+    }
+    .hero-side-header{
+      display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:#e5e7eb;
+    }
+    .hero-side-header .dot{
+      width:9px;height:9px;border-radius:999px;
+      background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,.9);
+    }
+    .hero-side-body .line{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:5px 0;border-bottom:1px dashed rgba(55,65,81,.8);
+    }
+    .hero-side-body .line:last-child{border-bottom:none;}
+    .hero-side-body span{color:#9ca3af;}
+    .hero-side-body strong{color:#e5e7eb;}
+    .hero-side-footer{margin-top:8px;font-size:.74rem;color:#9ca3af;}
+    .hero-founder-chip{
+      display:flex;align-items:center;gap:10px;
+      background:rgba(15,23,42,.95);
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,.8);
+      padding:6px 10px;
+    }
+    .hero-founder-chip img{
+      width:34px;height:34px;border-radius:999px;
+      object-fit:cover;border:1px solid rgba(148,163,184,.8);
+    }
+    .hero-founder-chip strong{display:block;font-size:.8rem;}
+    .hero-founder-chip span{display:block;font-size:.74rem;color:#9ca3af;}
+
+    /* Sections */
+    section{padding:70px 0;position:relative;overflow:hidden;}
+    h2{
+      font-size:clamp(1.5rem,2.4vw,2rem);
+      margin-bottom:8px;
+      color:#e5e7eb;
+    }
+    .lead{color:#9ca3af;max-width:760px;font-size:.98rem;}
+    .grid{display:grid;gap:18px;}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+    @media(max-width:960px){.grid.cols-3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:720px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr;}}
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      border:1px solid rgba(148,163,184,.18);
+      box-shadow:0 16px 45px rgba(15,23,42,.9);
+      padding:22px;
+      font-size:.95rem;
+    }
+    .card h3{margin-bottom:8px;color:#e5e7eb;font-size:1.02rem;}
+    .card p{color:#9ca3af;}
+
+    /* Testimonials carousel (simple static for now) */
+    .quote{font-style:italic;color:#e5e7eb;margin-bottom:6px;}
+    .person{font-size:.9rem;color:#9ca3af;}
+
+    /* Pricing */
+    #pricing{background:radial-gradient(circle at top,#02091f,#020617);}
+    .price{font-size:2rem;font-weight:900;color:#e5e7eb;margin:8px 0;}
+    .small{font-size:.85rem;color:#9ca3af;}
+
+    /* FAQ */
+    #faq .card h3{font-size:1rem;}
+
+    /* Form */
+    form label{
+      display:block;font-size:.9rem;font-weight:600;color:#e5e7eb;margin-bottom:4px;
+    }
+    form input, form textarea, form select{
+      width:100%;padding:10px 11px;border-radius:10px;
+      border:1px solid rgba(55,65,81,1);
+      background:#020617;color:#e5e7eb;
+      font-family:inherit;font-size:.9rem;
+      outline:none;
+    }
+    form input:focus,form textarea:focus,form select:focus{
+      border-color:var(--accent);
+      box-shadow:0 0 0 3px var(--ring);
+    }
+    form .row{display:grid;gap:16px;grid-template-columns:repeat(2,minmax(0,1fr));}
+    @media(max-width:720px){form .row{grid-template-columns:1fr;}}
+
+    form button{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:11px 18px;border-radius:999px;
+      border:0;background:linear-gradient(135deg,#00e0ff,#22c55e);
+      color:#020617;font-weight:800;font-size:.9rem;
+      cursor:pointer;box-shadow:0 16px 50px rgba(8,47,73,.9);
+    }
+
+    /* Contact */
+    #contact .card p{margin:4px 0;}
+
+    /* Footer */
+    footer{
+      padding:26px 0;
+      border-top:1px solid rgba(31,41,55,1);
+      background:#020617;
+      font-size:.82rem;color:#9ca3af;
+    }
+    footer-inner{display:flex;}
+
+    .footer-flex{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;flex-wrap:wrap;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Topbar / Navigation -->
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand-wrap">
+        <img src="assets/logo.svg" alt="Bmorekarefulbilling Logo">
+        <span>Bmorekarefulbilling LLC</span>
+      </div>
+      <nav class="links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#case">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#portal">Intake</a>
+        <a href="#contact" class="cta-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-media">
+      <img src="assets/hero-med-tech.jpg" alt="Medical technology background">
+    </div>
     <div class="hero-overlay"></div>
-  </div>
 
-  <!-- Foreground Content -->
-  <div class="container hero-inner">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tagline">Black-owned • LGBTQ+-led • Future-focused Billing</div>
+        <h1>Medical billing that actually protects your revenue.</h1>
+        <p class="hero-sub">
+          I’m <strong>Michael Henderson, MBA</strong>. I help outpatient providers move from “Where is our money?” to
+          “Our revenue is under control.” Clean claims within 2 business days, crushed denials, and KPIs you can finally understand.
+        </p>
 
-    <!-- LEFT SIDE COPY -->
-    <div class="hero-copy">
-      <div class="hero-tagline">Black-owned • LGBTQ+-led • Precision Billing</div>
+        <div class="hero-actions">
+          <a href="#portal" class="btn btn-primary">Start Intake</a>
+          <a href="#michael" class="btn btn-outline">Meet Michael</a>
+        </div>
 
-      <h1>Billing that feels like the future.<br>Results that feel like relief.</h1>
+        <div class="hero-metrics">
+          <div><strong>≤ 2 days</strong><span>Claim submission</span></div>
+          <div><strong>97%</strong><span>First-pass yield</span></div>
+          <div><strong>41%↓</strong><span>Denial reduction</span></div>
+        </div>
+      </div>
 
-      <p class="hero-sub">
-        I’m <strong>Michael Henderson, MBA</strong>.  
-        Providers trust me because I don’t just bill — I rebuild your revenue flow.  
-        Clean claims in 2 days. Denials crushed. KPIs you can finally understand.
+      <div class="hero-side">
+        <div class="hero-side-card">
+          <div class="hero-side-header">
+            <span>Live Revenue Snapshot</span>
+            <span class="dot"></span>
+          </div>
+          <div class="hero-side-body">
+            <div class="line"><span>A/R Days</span><strong>28 → 21</strong></div>
+            <div class="line"><span>Denial Rate</span><strong>↓ 38%</strong></div>
+            <div class="line"><span>Clean Claims</span><strong>99%+</strong></div>
+          </div>
+          <div class="hero-side-footer">
+            Optimized by Bmorekarefulbilling LLC
+          </div>
+        </div>
+
+        <div class="hero-founder-chip">
+          <img src="assets/michael-henderson.jpg" alt="Michael Henderson, MBA">
+          <div>
+            <strong>Michael Henderson, MBA</strong>
+            <span>Your revenue architect & billing specialist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="lead">
+        From clean claim creation to full revenue cycle management, we deliver measurable improvements and peace of mind.
       </p>
-
-      <div class="hero-actions">
-        <a href="#portal" class="btn primary">Start Intake</a>
-        <a href="#michael" class="btn outline">Meet Michael</a>
-      </div>
-
-      <div class="hero-metrics">
-        <div>
-          <strong>≤ 2 days</strong>
-          <span>Claim submission</span>
+      <div class="grid cols-3" style="margin-top:18px">
+        <div class="card">
+          <h3>Claim Submission</h3>
+          <p>Accurate claims sent within 2 business days of complete documentation. Eligibility, coding checks, and scrubbing included.</p>
         </div>
-        <div>
-          <strong>97%</strong>
-          <span>First-pass yield</span>
+        <div class="card">
+          <h3>Denial Management</h3>
+          <p>Appeals, root-cause analysis, and payer follow-up to recover revenue and stop repeat denials.</p>
         </div>
-        <div>
-          <strong>41%↓</strong>
-          <span>Denial reduction</span>
+        <div class="card">
+          <h3>Patient Billing</h3>
+          <p>Clear statements, timely reminders, and compassionate collections that protect patient relationships.</p>
+        </div>
+        <div class="card">
+          <h3>Full RCM</h3>
+          <p>End-to-end posting, reconciliation, and reporting with executive dashboards and monthly reviews.</p>
+        </div>
+        <div class="card">
+          <h3>Audit & Compliance</h3>
+          <p>Documentation standards, medical necessity checks, and coding audits for accuracy and risk reduction.</p>
+        </div>
+        <div class="card">
+          <h3>Analytics</h3>
+          <p>Actionable KPIs and cohort analysis to reduce A/R days and improve first-pass yield.</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- RIGHT SIDE LIVE SNAPSHOT -->
-    <div class="hero-side">
-
-      <div class="hero-side-card">
-        <div class="hero-side-header">
-          <span>Live Revenue Snapshot</span>
-          <span class="dot"></span>
+  <!-- Case Studies / Results -->
+  <section id="case">
+    <div class="container">
+      <h2>Recent Results</h2>
+      <p class="lead">Real numbers from real providers I’ve helped stabilize and grow.</p>
+      <div class="grid cols-3" style="margin-top:18px">
+        <div class="card">
+          <h3>Behavioral Health Clinic</h3>
+          <p class="quote">“Denials dropped 41% in 60 days and cash flow stabilized.”</p>
+          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+            <li>Fixed time-based coding usage & auth workflows</li>
+            <li>Appealed legacy denials; added root-cause guardrails</li>
+          </ul>
         </div>
-
-        <div class="hero-side-body">
-          <div class="line">
-            <span>A/R Days</span><strong>28 → 21</strong>
-          </div>
-          <div class="line">
-            <span>Denial Rate</span><strong>↓ 38%</strong>
-          </div>
-          <div class="line">
-            <span>Clean Claims</span><strong>99%+</strong>
-          </div>
+        <div class="card">
+          <h3>Primary Care Group</h3>
+          <p class="quote">“First-pass yield up to 97% with 2-day submissions.”</p>
+          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+            <li>Eligibility & benefits verification automation</li>
+            <li>Cleaner documentation templates + scrubbing</li>
+          </ul>
         </div>
-
-        <div class="hero-side-footer">
-          Optimized by Bmorekarefulbilling LLC
-        </div>
-      </div>
-
-      <!-- FOUNDER CHIP -->
-      <div class="hero-founder-chip">
-        <img src="assets/michael-henderson.jpg" alt="Michael Henderson, MBA">
-        <div>
-          <strong>Michael Henderson, MBA</strong>
-          <span>Your revenue architect</span>
+        <div class="card">
+          <h3>PT Provider</h3>
+          <p class="quote">“A/R >90 days cut by 35% in one quarter.”</p>
+          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+            <li>Improved payer follow-up cadence & tracking</li>
+            <li>Refined appeals package library & timelines</li>
+          </ul>
         </div>
       </div>
-
     </div>
-  </div>
+  </section>
 
-</section>
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="container">
+      <h2>Simple, transparent pricing</h2>
+      <p class="lead">Flat monthly rates per provider. No surprise fees, ever.</p>
+      <div class="grid cols-3" style="margin-top:18px">
+        <div class="card">
+          <h3>Starter</h3>
+          <p class="price">$625<span class="small">/mo per provider</span></p>
+          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+            <li>Claim submission in ≤ 2 days</li>
+            <li>Basic denial follow-up</li>
+            <li>Monthly KPI snapshot</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Growth</h3>
+          <p class="price">$833<span class="small">/mo per provider</span></p>
+          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+            <li>Advanced denial management</li>
+            <li>Patient billing & statements</li>
+            <li>KPI + recommendations review</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pro</h3>
+          <p class="price">$926<span class="small">/mo per provider</span></p>
+          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+            <li>Full RCM support</li>
+            <li>Appeals & prevention program</li>
+            <li>Custom reports & reviews</li>
+          </ul>
+        </div>
+      </div>
+      <p class="small" style="margin-top:8px">
+        Need volume pricing or a hybrid percentage model?
+        <a href="#portal">Start an intake</a> and we’ll customize a plan.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="grid cols-2" style="margin-top:18px">
+        <div class="card">
+          <h3>How fast can we start?</h3>
+          <p>We can begin onboarding as soon as your intake is received—most providers go live in 5–10 business days.</p>
+        </div>
+        <div class="card">
+          <h3>Do you support my EMR/billing system?</h3>
+          <p>Yes. I work with Epic, Kareo, Waystar, IDX/GE, and others. Tell me your stack in the intake form.</p>
+        </div>
+        <div class="card">
+          <h3>How do you handle PHI?</h3>
+          <p>I maintain HIPAA-aligned processes: least-privilege access, audit trails, and encrypted channels.</p>
+        </div>
+        <div class="card">
+          <h3>What KPIs do I get?</h3>
+          <p>A/R days, net collections, denial rates, first-pass yield, and payer-level drill-downs in plain language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intake Form -->
+  <section id="portal">
+    <div class="container">
+      <h2>Client Portal – Intake Form</h2>
+      <p class="lead">Secure intake for new providers. I respond within 24 hours.</p>
+
+      <div class="card" style="margin-top:14px">
+        <form method="POST" action="https://formspree.io/f/mgvrwjpj" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="New Intake — Bmorekarefulbilling">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://bmorekarefulbill.com/thank-you.html">
+
+          <div class="row">
+            <div>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@practice.com" required>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top:12px">
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" placeholder="(###) ###-####" required>
+            </div>
+            <div>
+              <label for="practice">Practice / Organization</label>
+              <input id="practice" name="practice" placeholder="Practice name" required>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top:12px">
+            <div>
+              <label for="specialty">Specialty</label>
+              <select id="specialty" name="specialty">
+                <option value="" selected disabled>Select specialty</option>
+                <option>Primary Care</option>
+                <option>Behavioral Health</option>
+                <option>Dental</option>
+                <option>Physical Therapy</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="emr">EMR / Billing System</label>
+              <input id="emr" name="emr" placeholder="Epic, Kareo, Waystar, IDX, etc.">
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <label for="notes">What services do you need?</label>
+            <textarea id="notes" name="notes" rows="5" placeholder="Claim submission, denial management, full RCM, patient billing, etc."></textarea>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            <button type="submit">Submit Intake</button>
+            <span class="small">I’ll reply within 24 hours.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="lead">Prefer email or phone? Reach me directly.</p>
+      <div class="card" style="margin-top:14px">
+        <p><strong>Email:</strong> <a href="mailto:bmorekarefulbill@yahoo.com">bmorekarefulbill@yahoo.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+14102791464">410-279-1464</a></p>
+        <p><strong>Location:</strong> Baltimore, MD (serving providers across the U.S.)</p>
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#portal">Start Intake</a>
+          <a class="btn btn-outline" href="mailto:bmorekarefulbill@yahoo.com?subject=Custom%20Quote%20Request%20—%20Bmorekarefulbilling">Email for Quote</a>
+          <a class="btn btn-outline" href="tel:+14102791464">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-flex">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <img src="assets/logo.svg" alt="Bmorekarefulbilling Logo" style="height:22px;width:auto;">
+        <strong style="color:#e5e7eb;font-size:.86rem;">Bmorekarefulbilling LLC</strong>
+      </div>
+      <p>© <span id="year"></span> Bmorekarefulbilling LLC • Black-owned • LGBTQ+-led • HIPAA-aligned • Baltimore, MD</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
