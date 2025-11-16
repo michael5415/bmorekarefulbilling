@@ -15,12 +15,13 @@
 
   <style>
     :root{
-      --brand:#0a1a3f; /* navy */
-      --accent:#00a8b5; /* turquoise */
-      --ink:#e5e7eb;
-      --muted:#020617;
-      --card:#02091f;
-      --ring: rgba(0,168,181,.35);
+      --brand:#0b1f4b;   /* brighter navy */
+      --accent:#00c4d8;  /* bright teal */
+      --accent-soft:#22c55e;
+      --ink:#f9fafb;     /* light text */
+      --muted:#02091f;
+      --card:#0b1220;
+      --ring: rgba(0,196,216,.4);
       --radius:18px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
@@ -29,7 +30,10 @@
       margin:0;
       font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       color:var(--ink);
-      background:radial-gradient(circle at 0 0,rgba(56,189,248,.16),transparent 55%), #020617;
+      background:
+        radial-gradient(circle at 0 0,rgba(56,189,248,.22),transparent 60%),
+        radial-gradient(circle at 100% 0,rgba(45,212,191,.18),transparent 55%),
+        #02091f;
       line-height:1.6;
     }
     a{color:var(--accent);text-decoration:none}
@@ -40,10 +44,13 @@
       position:sticky;top:0;z-index:50;
       backdrop-filter:blur(12px) saturate(140%);
       background:rgba(3,7,18,.92);
-      border-bottom:1px solid rgba(148,163,184,.2);
+      border-bottom:1px solid rgba(148,163,184,.35);
     }
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand-wrap{display:flex;align-items:center;gap:10px;color:#e5e7eb;font-weight:800;font-size:.95rem;}
+    .brand-wrap{
+      display:flex;align-items:center;gap:10px;
+      color:#e5e7eb;font-weight:800;font-size:.95rem;
+    }
     .brand-wrap img{height:26px;width:auto;display:block}
     .links{display:flex;align-items:center;gap:18px;font-size:.88rem;}
     .links a{color:#e5e7eb;opacity:.9;font-weight:500}
@@ -57,26 +64,26 @@
       .links{display:none;}
     }
 
-    /* HERO (SIMPLE IMAGE BACKGROUND) */
+    /* Hero */
     .hero{
       position:relative;
-      color:#e5e7eb;
+      color:#f9fafb;
       overflow:hidden;
-      background:#020617;
+      background:#02091f;
     }
     .hero-media{
       position:absolute;inset:0;z-index:0;overflow:hidden;
     }
     .hero-media img{
       width:100%;height:100%;object-fit:cover;
-      filter:saturate(1.05) contrast(1.05) brightness(.85);
+      filter:saturate(1.08) contrast(1.02) brightness(1.05);
       transform:scale(1.02);
     }
     .hero-overlay{
       position:absolute;inset:0;z-index:1;
       background:
-        linear-gradient(to bottom,rgba(3,7,18,.5),rgba(3,7,18,.95)),
-        radial-gradient(circle at 0 0,rgba(56,189,248,.35),transparent 60%);
+        linear-gradient(to bottom,rgba(3,7,18,.25),rgba(3,7,18,.85)),
+        radial-gradient(circle at 0 0,rgba(56,189,248,.5),transparent 65%);
     }
     .hero-inner{
       position:relative;z-index:2;
@@ -85,7 +92,7 @@
       display:grid;grid-template-columns:1.15fr .9fr;gap:34px;
     }
     @media(max-width:900px){
-      .hero-inner{grid-template-columns:1fr;padding:76px 20px 70px;}
+      .hero-inner{grid-template-columns:1fr;padding:80px 20px 70px;}
     }
     .hero-tagline{
       font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;
@@ -97,7 +104,7 @@
       text-shadow:0 0 30px rgba(0,0,0,.9);
       margin-bottom:10px;
     }
-    .hero-sub{font-size:1rem;max-width:540px;color:#d1d5db;margin-bottom:18px;}
+    .hero-sub{font-size:1rem;max-width:540px;color:#e5e7eb;margin-bottom:18px;}
 
     .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px;}
     .btn{
@@ -105,30 +112,35 @@
       padding:11px 18px;border-radius:999px;
       font-weight:800;font-size:.9rem;border:0;cursor:pointer;
       text-decoration:none;
+      transition:transform .1s ease, box-shadow .15s ease;
     }
     .btn-primary{
       background:linear-gradient(135deg,#00e0ff,#22c55e);
-      color:#020617;box-shadow:0 20px 70px rgba(8,47,73,.9);
+      color:#020617;box-shadow:0 20px 70px rgba(8,47,73,.95);
     }
     .btn-outline{
       border:1px solid rgba(148,163,184,.7);
-      background:rgba(15,23,42,.85);
+      background:rgba(15,23,42,.9);
       color:#e5e7eb;
     }
+    .btn:hover{transform:translateY(-1px);box-shadow:0 18px 50px rgba(8,47,73,.85);}
 
     .hero-metrics{
       display:flex;flex-wrap:wrap;gap:14px;
-      font-size:.85rem;color:#9ca3af;
+      font-size:.85rem;color:#e5e7eb;
     }
-    .hero-metrics strong{display:block;font-size:1.1rem;color:#e5e7eb;}
+    .hero-metrics strong{
+      display:block;font-size:1.15rem;color:#ffffff;
+    }
 
     .hero-side{display:flex;flex-direction:column;gap:16px;align-items:flex-end;}
     @media(max-width:900px){.hero-side{align-items:flex-start;}}
+
     .hero-side-card{
       width:100%;max-width:340px;
       border-radius:20px;
       background:radial-gradient(circle at top,#02091f,#020617);
-      border:1px solid rgba(37,99,235,.8);
+      border:1px solid rgba(191,219,254,.4);
       box-shadow:0 26px 80px rgba(15,23,42,.98);
       padding:14px 14px 12px;
       font-size:.82rem;
@@ -148,28 +160,61 @@
     .hero-side-body span{color:#9ca3af;}
     .hero-side-body strong{color:#e5e7eb;}
     .hero-side-footer{margin-top:8px;font-size:.74rem;color:#9ca3af;}
-    .hero-founder-chip{
-      display:flex;align-items:center;gap:10px;
+
+    .hero-founder-card{
+      width:100%;max-width:340px;
+      display:flex;gap:12px;align-items:center;
       background:rgba(15,23,42,.95);
       border-radius:999px;
-      border:1px solid rgba(148,163,184,.8);
-      padding:6px 10px;
+      border:1px solid rgba(148,163,184,.9);
+      padding:7px 12px;
     }
-    .hero-founder-chip img{
-      width:34px;height:34px;border-radius:999px;
-      object-fit:cover;border:1px solid rgba(148,163,184,.8);
+    .hero-founder-card img{
+      width:42px;height:42px;border-radius:999px;
+      object-fit:cover;border:1px solid rgba(148,163,184,.9);
     }
-    .hero-founder-chip strong{display:block;font-size:.8rem;}
-    .hero-founder-chip span{display:block;font-size:.74rem;color:#9ca3af;}
+    .hero-founder-card strong{display:block;font-size:.82rem;}
+    .hero-founder-card span{display:block;font-size:.76rem;color:#9ca3af;}
+
+    /* Visual strip under hero */
+    .visual-strip{
+      background:rgba(15,23,42,.98);
+      border-top:1px solid rgba(30,64,175,.6);
+      border-bottom:1px solid rgba(30,64,175,.6);
+    }
+    .visual-inner{
+      max-width:1120px;margin:0 auto;padding:18px 20px;
+      display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+    }
+    .visual-label{
+      font-size:.8rem;text-transform:uppercase;
+      letter-spacing:.18em;color:#9ca3af;
+      flex:0 0 auto;
+    }
+    .visual-gallery{
+      display:flex;gap:10px;flex-wrap:wrap;flex:1;
+    }
+    .visual-img{
+      flex:0 0 110px;
+      height:68px;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(148,163,184,.6);
+      background:#020617;
+    }
+    .visual-img img{
+      width:100%;height:100%;object-fit:cover;
+      display:block;
+    }
 
     /* Sections */
     section{padding:70px 0;position:relative;overflow:hidden;}
     h2{
       font-size:clamp(1.5rem,2.4vw,2rem);
       margin-bottom:8px;
-      color:#e5e7eb;
+      color:#f9fafb;
     }
-    .lead{color:#9ca3af;max-width:760px;font-size:.98rem;}
+    .lead{color:#e5e7eb;max-width:760px;font-size:.98rem;}
     .grid{display:grid;gap:18px;}
     .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
     .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
@@ -177,36 +222,31 @@
     @media(max-width:720px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr;}}
 
     .card{
-      background:var(--card);
+      background:linear-gradient(145deg,rgba(15,23,42,.96),rgba(30,64,175,.88));
       border-radius:var(--radius);
-      border:1px solid rgba(148,163,184,.18);
-      box-shadow:0 16px 45px rgba(15,23,42,.9);
+      border:1px solid rgba(191,219,254,.38);
+      box-shadow:0 18px 55px rgba(15,23,42,.9);
       padding:22px;
       font-size:.95rem;
     }
-    .card h3{margin-bottom:8px;color:#e5e7eb;font-size:1.02rem;}
-    .card p{color:#9ca3af;}
-
-    /* Testimonials carousel (simple static for now) */
-    .quote{font-style:italic;color:#e5e7eb;margin-bottom:6px;}
-    .person{font-size:.9rem;color:#9ca3af;}
+    .card h3{margin-bottom:8px;color:#f9fafb;font-size:1.02rem;}
+    .card p{color:#e5e7eb;}
+    .quote{font-style:italic;color:#f9fafb;margin-bottom:6px;}
+    .person{font-size:.9rem;color:#cbd5f5;}
 
     /* Pricing */
     #pricing{background:radial-gradient(circle at top,#02091f,#020617);}
-    .price{font-size:2rem;font-weight:900;color:#e5e7eb;margin:8px 0;}
-    .small{font-size:.85rem;color:#9ca3af;}
-
-    /* FAQ */
-    #faq .card h3{font-size:1rem;}
+    .price{font-size:2rem;font-weight:900;color:#f9fafb;margin:8px 0;}
+    .small{font-size:.85rem;color:#cbd5f5;}
 
     /* Form */
     form label{
-      display:block;font-size:.9rem;font-weight:600;color:#e5e7eb;margin-bottom:4px;
+      display:block;font-size:.9rem;font-weight:600;color:#f9fafb;margin-bottom:4px;
     }
     form input, form textarea, form select{
       width:100%;padding:10px 11px;border-radius:10px;
       border:1px solid rgba(55,65,81,1);
-      background:#020617;color:#e5e7eb;
+      background:#020617;color:#f9fafb;
       font-family:inherit;font-size:.9rem;
       outline:none;
     }
@@ -235,13 +275,10 @@
       background:#020617;
       font-size:.82rem;color:#9ca3af;
     }
-    footer-inner{display:flex;}
-
     .footer-flex{
       display:flex;align-items:center;justify-content:space-between;
       gap:16px;flex-wrap:wrap;
     }
-
   </style>
 </head>
 <body>
@@ -308,12 +345,30 @@
           </div>
         </div>
 
-        <div class="hero-founder-chip">
-          <img src="assets/michael-henderson.jpg" alt="Michael Henderson, MBA">
+        <div class="hero-founder-card">
+          <img src="assets/doctor-holo.jpg" alt="Michael Henderson stylized">
           <div>
             <strong>Michael Henderson, MBA</strong>
             <span>Your revenue architect & billing specialist</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual strip with your images -->
+  <section class="visual-strip">
+    <div class="visual-inner">
+      <div class="visual-label">Visualizing your revenue flow</div>
+      <div class="visual-gallery">
+        <div class="visual-img">
+          <img src="assets/doctor-holo.jpg" alt="Doctor hologram illustration">
+        </div>
+        <div class="visual-img">
+          <img src="assets/hex-bar.png" alt="Data and analytics visual">
+        </div>
+        <div class="visual-img">
+          <img src="assets/art-anatomy-flowers.png" alt="Abstract medical design">
         </div>
       </div>
     </div>
@@ -355,6 +410,31 @@
     </div>
   </section>
 
+  <!-- Meet Michael -->
+  <section id="michael">
+    <div class="container">
+      <h2>Meet Michael</h2>
+      <div class="card" style="margin-top:14px;display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap;">
+        <div style="flex:0 0 auto;">
+          <div style="width:110px;height:110px;border-radius:28px;overflow:hidden;border:1px solid rgba(191,219,254,.55);background:#020617;">
+            <img src="assets/doctor-holo.jpg" alt="Michael Henderson stylized portrait" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div style="flex:1 1 260px;">
+          <p class="lead" style="margin-bottom:10px;">
+            I’m <strong>Michael Henderson, MBA</strong>, founder of Bmorekarefulbilling LLC — a Black-owned, LGBTQ+-led billing practice built to protect providers and their patients.
+          </p>
+          <p style="color:#e5e7eb;font-size:.95rem;margin-bottom:8px;">
+            I’ve worked across primary care, behavioral health, PT, and specialty practices, fixing broken revenue systems, chasing down denials, and translating payer chaos into clear, actionable KPIs.
+          </p>
+          <p style="color:#cbd5f5;font-size:.9rem;">
+            When you work with me, you’re not just “outsourcing billing.” You’re partnering with someone who lives revenue cycle, understands your community, and treats your cash flow like it’s his own.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Case Studies / Results -->
   <section id="case">
     <div class="container">
@@ -364,7 +444,7 @@
         <div class="card">
           <h3>Behavioral Health Clinic</h3>
           <p class="quote">“Denials dropped 41% in 60 days and cash flow stabilized.”</p>
-          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+          <ul style="margin-left:18px;color:#e5e7eb;font-size:.9rem;">
             <li>Fixed time-based coding usage & auth workflows</li>
             <li>Appealed legacy denials; added root-cause guardrails</li>
           </ul>
@@ -372,7 +452,7 @@
         <div class="card">
           <h3>Primary Care Group</h3>
           <p class="quote">“First-pass yield up to 97% with 2-day submissions.”</p>
-          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+          <ul style="margin-left:18px;color:#e5e7eb;font-size:.9rem;">
             <li>Eligibility & benefits verification automation</li>
             <li>Cleaner documentation templates + scrubbing</li>
           </ul>
@@ -380,7 +460,7 @@
         <div class="card">
           <h3>PT Provider</h3>
           <p class="quote">“A/R >90 days cut by 35% in one quarter.”</p>
-          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+          <ul style="margin-left:18px;color:#e5e7eb;font-size:.9rem;">
             <li>Improved payer follow-up cadence & tracking</li>
             <li>Refined appeals package library & timelines</li>
           </ul>
@@ -398,7 +478,7 @@
         <div class="card">
           <h3>Starter</h3>
           <p class="price">$625<span class="small">/mo per provider</span></p>
-          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+          <ul style="margin-left:18px;color:#e5e7eb;font-size:.9rem;">
             <li>Claim submission in ≤ 2 days</li>
             <li>Basic denial follow-up</li>
             <li>Monthly KPI snapshot</li>
@@ -407,7 +487,7 @@
         <div class="card">
           <h3>Growth</h3>
           <p class="price">$833<span class="small">/mo per provider</span></p>
-          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+          <ul style="margin-left:18px;color:#e5e7eb;font-size:.9rem;">
             <li>Advanced denial management</li>
             <li>Patient billing & statements</li>
             <li>KPI + recommendations review</li>
@@ -416,7 +496,7 @@
         <div class="card">
           <h3>Pro</h3>
           <p class="price">$926<span class="small">/mo per provider</span></p>
-          <ul style="margin-left:18px;color:#9ca3af;font-size:.9rem;">
+          <ul style="margin-left:18px;color:#e5e7eb;font-size:.9rem;">
             <li>Full RCM support</li>
             <li>Appeals & prevention program</li>
             <li>Custom reports & reviews</li>
