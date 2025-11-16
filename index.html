@@ -3,186 +3,664 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bmorekarefulbilling LLC — Medical Billing & RCM That Boosts Cash Flow</title>
-  <meta name="description" content="RCM experts for outpatient providers. Clean claims in 2 days, proactive denial management, transparent KPIs, HIPAA-aligned. Start your intake today." />
+  <title>Bmorekarefulbilling LLC — Futuristic Medical Billing & RCM</title>
+
+  <meta name="description" content="Black-owned, LGBTQ+-led medical billing studio delivering clean claims, crushed denials, and honest KPIs. Built by Michael Henderson, MBA — your revenue architect." />
   <meta name="robots" content="index, follow" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='2' y='2' width='44' height='44' rx='10' fill='%230a1a3f'/%3E%3Cpath d='M24 10v28M10 24h28' stroke='%2300a8b5' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M15 30h18' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
-  <meta property="og:title" content="Bmorekarefulbilling LLC — Medical Billing & RCM" />
-  <meta property="og:description" content="Clean claims fast. Fewer denials. Clear KPIs. Start your intake today." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bmorekarefulbilling LLC — Medical Billing That Actually Gets You Paid" />
+  <meta property="og:description" content="Clean claims in 2 days, denial rates smashed, and KPIs you can actually read. Black-owned, LGBTQ+-led billing you can trust." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bmorekarefulbill.com/" />
   <meta property="og:image" content="https://bmorekarefulbill.com/assets/hero-med-tech.jpg" />
 
   <style>
     :root{
-      --brand:#0a1a3f; /* navy */
-      --accent:#00a8b5; /* turquoise */
-      --ink:#111827; /* gray-900 */
-      --muted:#f5f8fa; /* soft gray */
-      --card:#ffffff;
-      --ring: rgba(0,168,181,.35);
+      --bg-deep:#020617;
+      --bg-soft:#02091f;
+      --card:#02091f;
+      --card-soft:#0b1220;
+      --accent:#00e0ff;
+      --accent-2:#22c55e;
+      --accent-warm:#f97316;
+      --border:#1e293b;
+      --text-main:#e5e7eb;
+      --text-soft:#9ca3af;
+      --danger:#fb7185;
+      --good:#4ade80;
+      --ring:rgba(56,189,248,.5);
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--ink); background:var(--muted); line-height:1.55}
-    a{color:var(--accent); text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px}
-    .small{font-size:.86rem;color:#4b5563}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:radial-gradient(circle at top left,#02091f 0,#020617 45%,#020617 100%);
+      color:var(--text-main);
+      line-height:1.55;
+    }
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1180px;margin:0 auto;padding:0 20px}
+    .small{font-size:.82rem;color:var(--text-soft)}
 
     /* Topbar */
-    .topbar{position:sticky;top:0;z-index:50;background:rgba(10,26,63,.96);backdrop-filter:saturate(180%) blur(8px); color:#fff; border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}
-    .brand svg{height:28px;width:28px}
-    .links{display:flex;align-items:center;gap:18px}
-    .links a{color:#fff;font-weight:600;opacity:.92}
-    .cta{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;font-weight:800}
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(2,6,23,.96);
+      backdrop-filter:blur(18px) saturate(180%);
+      border-bottom:1px solid rgba(30,64,175,.6);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      color:var(--text-main);
+      font-weight:700;
+    }
+    .brand svg{height:26px;width:auto;display:block}
+    .nav-right{display:flex;align-items:center;gap:18px;font-size:.85rem}
+    .nav-links{display:flex;align-items:center;gap:16px}
+    .nav-links a{color:var(--text-soft);font-weight:500}
+    .nav-links a:hover{color:var(--text-main)}
+    .nav-cta{
+      padding:8px 14px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.7);
+      color:var(--text-main);font-weight:600;
+    }
+    .nav-cta-primary{
+      background:linear-gradient(135deg,#00e0ff,#22c55e);
+      border:none;color:#020617;
+      font-weight:800;
+      box-shadow:0 10px 32px rgba(56,189,248,.45);
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+    }
+    @media(max-width:880px){
+      .nav-links{display:none}
+    }
 
     /* Hero */
-    .hero{position:relative; overflow:hidden; background:radial-gradient(1200px 500px at 10% -10%, rgba(0,168,181,.25), transparent), radial-gradient(900px 500px at 110% 0%, rgba(0,168,181,.18), transparent), var(--brand); color:#fff}
-    .hero .inner{display:grid; grid-template-columns:1.15fr .85fr; gap:28px; padding:92px 0}
-    .badge{display:inline-flex;align-items:center;gap:.5rem; background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2); padding:6px 12px; border-radius:999px; font-weight:700}
-    .hero h1{font-size:clamp(1.9rem, 3.2vw, 3rem); margin:12px 0 8px}
-    .hero p{font-size:1.06rem;opacity:.95;margin:0 0 18px}
-    .actions{display:flex; gap:12px; flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:.5rem; padding:12px 18px; border-radius:12px; font-weight:800; border:2px solid transparent; cursor:pointer}
-    .btn.primary{background:var(--accent); color:#fff}
-    .btn.secondary{background:#fff; color:var(--brand)}
-    .hero-card{background:#fff; color:var(--ink); padding:18px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,.15)}
-    .stat{display:flex;align-items:center;gap:12px}
-    .stat b{font-size:1.4rem}
-
-    .hero-media{display:flex;flex-direction:column;gap:16px}
-    .hero-media-img{
-      width:100%;
-      border-radius:18px;
+    .hero{
+      position:relative;
       overflow:hidden;
-      box-shadow:0 18px 46px rgba(0,0,0,.35);
+      background:
+        radial-gradient(900px 900px at 10% -10%,rgba(56,189,248,.35),transparent),
+        radial-gradient(1000px 900px at 110% -10%,rgba(59,130,246,.28),transparent),
+        linear-gradient(145deg,#020617,#020617 55%,#02091f 100%);
+      color:var(--text-main);
     }
-    .hero-media-img img{
-      width:100%;
-      height:100%;
-      max-height:320px;
-      object-fit:cover;
-      display:block;
+    .hero-glow{
+      pointer-events:none;
+      position:absolute;inset:0;
+      background:
+        radial-gradient(circle at 20% 20%,rgba(56,189,248,.22),transparent 55%),
+        radial-gradient(circle at 80% 10%,rgba(8,47,73,.7),transparent 60%);
+      mix-blend-mode:screen;opacity:.95;
+    }
+    .hero-inner{
+      position:relative;z-index:1;
+      display:grid;grid-template-columns:1.25fr .95fr;gap:32px;
+      padding:70px 0 52px;
+    }
+    .hero-tag{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:4px 10px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.6);
+      background:rgba(15,23,42,.88);
+      font-size:.72rem;color:var(--text-soft);
+      text-transform:uppercase;letter-spacing:.16em;
+    }
+    .hero-tag span.highlight{
+      padding:2px 8px;border-radius:999px;
+      background:rgba(34,197,94,.18);
+      border:1px solid rgba(34,197,94,.6);
+      color:#bbf7d0;
+      display:inline-flex;align-items:center;gap:4px;
+    }
+    .hero-title{
+      font-size:clamp(2.1rem,3.7vw,3.1rem);
+      line-height:1.1;
+      margin:16px 0 10px;
+    }
+    .hero-title span.accent{
+      background:linear-gradient(120deg,#00e0ff,#a855f7);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+    .hero-sub{
+      max-width:520px;
+      color:var(--text-soft);
+      font-size:.95rem;
     }
 
-    @media(max-width:920px){
-      .hero .inner{grid-template-columns:1fr; padding:72px 0}
-      .hero-media-img img{max-height:none}
+    .hero-rotator{
+      margin:14px 0 12px;
+      font-size:.8rem;
+      color:#a5f3fc;
+      display:flex;align-items:center;gap:8px;
+      text-transform:uppercase;letter-spacing:.14em;
+      font-weight:600;
+    }
+    .hero-rotator-dot{
+      width:8px;height:8px;border-radius:999px;
+      background:#22c55e;
+      box-shadow:0 0 12px rgba(34,197,94,.9);
+    }
+    .hero-rotator-text{
+      min-height:1.2em;
+      transition:opacity .35s ease,transform .35s ease;
+    }
+    .hero-rotator-text.fade-out{opacity:0;transform:translateY(-6px)}
+    .hero-rotator-text.fade-in{opacity:1;transform:translateY(0)}
+
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 12px}
+    .btn{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:11px 16px;border-radius:999px;
+      border:1px solid transparent;cursor:pointer;
+      font-size:.82rem;font-weight:800;
+      text-transform:uppercase;letter-spacing:.16em;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#00e0ff,#22c55e);
+      color:#020617;border:none;
+      box-shadow:0 14px 36px rgba(8,47,73,.9);
+    }
+    .btn-primary:hover{transform:translateY(-1px);}
+    .btn-outline{
+      background:rgba(15,23,42,.92);
+      color:var(--text-main);
+      border-color:rgba(148,163,184,.85);
+    }
+    .btn-outline:hover{
+      border-color:rgba(56,189,248,.9);
+      box-shadow:0 0 0 1px rgba(56,189,248,.7);
+    }
+
+    .hero-metrics{
+      display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;
+    }
+    .metric-chip{
+      padding:7px 11px;border-radius:999px;
+      background:rgba(15,23,42,.95);
+      border:1px solid rgba(51,65,85,.9);
+      font-size:.78rem;color:var(--text-soft);
+      display:flex;align-items:center;gap:6px;
+    }
+    .metric-chip strong{color:var(--text-main);font-size:.9rem}
+
+    /* Hero right: hero image + founder card */
+    .hero-right{position:relative;display:flex;flex-direction:column;gap:16px;}
+
+    .hero-frame{
+      border-radius:22px;
+      overflow:hidden;
+      background:radial-gradient(circle at 0 0,#22d3ee22,transparent 55%),#020617;
+      border:1px solid rgba(148,163,184,.6);
+      box-shadow:
+        0 24px 70px rgba(15,23,42,.95),
+        0 0 0 1px rgba(15,23,42,1);
+      position:relative;
+      isolation:isolate;
+    }
+    .hero-frame-main{position:relative;overflow:hidden;border-radius:22px 22px 12px 12px;}
+    .hero-frame-main img{
+      width:100%;height:250px;object-fit:cover;display:block;
+      filter:saturate(1.08) contrast(1.05);
+    }
+    .hero-frame-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(to top,rgba(2,6,23,.96),transparent 45%);
+      pointer-events:none;
+    }
+    .hero-chip{
+      position:absolute;left:16px;bottom:16px;
+      padding:6px 10px;border-radius:999px;
+      background:rgba(15,23,42,.96);
+      border:1px solid rgba(148,163,184,.7);
+      font-size:.78rem;color:var(--text-soft);
+      display:flex;align-items:center;gap:7px;
+    }
+    .hero-chip span.dot{
+      width:8px;height:8px;border-radius:999px;
+      background:var(--good);
+      box-shadow:0 0 10px rgba(74,222,128,.9);
+    }
+    .hero-frame-footer{
+      padding:10px 14px 12px;
+      display:flex;justify-content:space-between;align-items:center;
+      border-top:1px solid rgba(37,99,235,.8);
+      background:radial-gradient(circle at top,#02091f,#020617 72%);
+      font-size:.78rem;
+    }
+    .hero-kpis{display:flex;gap:16px;}
+    .hero-kpi label{
+      color:var(--text-soft);display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;
+    }
+    .hero-kpi strong{color:var(--text-main);font-size:.9rem;}
+    .hero-status{
+      font-size:.74rem;color:var(--accent-2);
+      display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.14em;
+    }
+    .hero-status span.dot{
+      width:7px;height:7px;border-radius:999px;
+      background:var(--accent-2);box-shadow:0 0 8px rgba(34,197,94,.9);
+    }
+
+    /* Founder card overlay */
+    .founder-mini{
+      position:absolute;
+      right:-6px;bottom:-18px;
+      width:215px;
+      border-radius:22px;
+      background:radial-gradient(circle at top left,#22d3ee33,#0b1220 40%,#020617 100%);
+      border:1px solid rgba(129,140,248,.9);
+      box-shadow:0 20px 60px rgba(15,23,42,.98);
+      display:flex;gap:10px;padding:9px 11px 9px 9px;
+      align-items:center;
+    }
+    .founder-mini-img{
+      flex:0 0 60px;height:60px;border-radius:18px;
+      overflow:hidden;border:1px solid rgba(148,163,184,.8);
+      box-shadow:0 10px 30px rgba(15,23,42,.9);
+    }
+    .founder-mini-img img{
+      width:100%;height:100%;object-fit:cover;display:block;
+    }
+    .founder-mini-text{
+      font-size:.78rem;
+    }
+    .founder-mini-text strong{display:block;font-size:.82rem;}
+    .founder-mini-text span{display:block;color:var(--text-soft);font-size:.73rem;}
+    .founder-mini-tag{
+      display:inline-flex;align-items:center;gap:4px;
+      padding:2px 7px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.7);
+      font-size:.7rem;color:var(--text-soft);
+      margin-top:4px;
+    }
+
+    @media(max-width:980px){
+      .hero-inner{grid-template-columns:1fr;gap:32px;padding:62px 0 46px;}
+      .hero-right{order:-1}
+      .founder-mini{position:relative;right:auto;bottom:auto;margin-top:10px;}
+    }
+
+    /* KPI ticker */
+    .ticker-wrap{
+      border-top:1px solid rgba(15,23,42,1);
+      border-bottom:1px solid rgba(15,23,42,1);
+      background:radial-gradient(circle at 0 0,#02091f,#020617);
+      overflow:hidden;
+    }
+    .ticker{
+      display:flex;align-items:center;
+      gap:46px;
+      padding:9px 0;
+      white-space:nowrap;
+      animation:ticker 30s linear infinite;
+      font-size:.76rem;
+    }
+    .ticker-item{
+      display:inline-flex;align-items:center;gap:8px;
+      color:var(--text-soft);
+      text-transform:uppercase;
+      letter-spacing:.16em;
+    }
+    .ticker-item span.tag{
+      padding:3px 8px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.6);
+      background:rgba(15,23,42,.95);
+      color:var(--text-main);
+      font-size:.68rem;
+    }
+    @keyframes ticker{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-50%)}
     }
 
     /* Sections */
-    section{padding:68px 0}
-    h2{color:var(--brand); margin:0 0 18px; font-size:clamp(1.4rem, 2.6vw, 2rem)}
-    .lead{color:#374151; max-width:800px}
-    .card{background:var(--card); border-radius:14px; box-shadow:0 10px 28px rgba(2,8,20,.06); padding:22px}
-    .grid{display:grid; gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3, minmax(0,1fr))}
-    .grid.cols-2{grid-template-columns:repeat(2, minmax(0,1fr))}
-    @media(max-width:980px){ .grid.cols-3{grid-template-columns:1fr 1fr} }
-    @media(max-width:680px){ .grid.cols-3, .grid.cols-2{grid-template-columns:1fr} }
+    section{padding:70px 0}
+    .section-header{
+      display:flex;justify-content:space-between;gap:18px;align-items:flex-end;
+      margin-bottom:26px;
+    }
+    .section-kicker{
+      font-size:.78rem;text-transform:uppercase;letter-spacing:.18em;
+      color:#93c5fd;margin-bottom:6px;
+    }
+    .section-title{
+      font-size:clamp(1.4rem,2.3vw,2rem);
+      letter-spacing:.05em;text-transform:uppercase;
+    }
+    .lead{color:var(--text-soft);max-width:620px;font-size:.9rem}
+    @media(max-width:880px){
+      .section-header{flex-direction:column;align-items:flex-start}
+    }
 
-    /* Features */
-    .feature{display:flex; gap:12px}
-    .icon{flex:0 0 40px; height:40px; display:grid; place-items:center; border-radius:10px; background:rgba(0,168,181,.1); color:var(--accent)}
+    .pill-label{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:4px 10px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.5);
+      font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;
+      color:var(--text-soft);
+      background:rgba(15,23,42,.9);
+    }
 
-    /* Pricing */
-    .price{font-size:2rem; font-weight:900; color:var(--brand); margin:8px 0}
-    .plan ul{padding-left:18px}
+    .card{
+      background:radial-gradient(circle at top,#02091f,#020617);
+      border-radius:18px;
+      border:1px solid rgba(30,64,175,.7);
+      box-shadow:0 18px 55px rgba(15,23,42,.96);
+      padding:18px;
+    }
+    .soft-card{
+      background:rgba(15,23,42,.96);
+      border-radius:16px;
+      border:1px solid rgba(51,65,85,.9);
+      padding:16px 16px 18px;
+    }
+    .grid{display:grid;gap:18px}
+    .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media(max-width:980px){
+      .cols-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:720px){
+      .cols-3,.cols-2{grid-template-columns:1fr}
+    }
 
-    /* Pricing background with hex wave */
-    #pricing{position:relative;overflow:hidden}
-    #pricing::before{
+    /* Why us */
+    .why-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:start;}
+    @media(max-width:980px){.why-grid{grid-template-columns:1fr}}
+
+    .why-list{display:grid;gap:11px;margin-top:10px;}
+    .why-item{display:flex;gap:10px;align-items:flex-start;}
+    .why-bullet{
+      margin-top:3px;
+      width:18px;height:18px;border-radius:999px;
+      border:1px solid rgba(56,189,248,.7);
+      display:grid;place-items:center;
+      font-size:.7rem;color:#22d3ee;
+      background:rgba(15,23,42,.96);
+      box-shadow:0 0 12px rgba(56,189,248,.5);
+    }
+    .why-item h3{margin:0 0 4px;font-size:.95rem}
+    .why-item p{margin:0;font-size:.85rem;color:var(--text-soft)}
+
+    .badge-stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:.75rem;}
+    .badge{
+      padding:3px 8px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.7);
+      background:rgba(15,23,42,.98);
+      color:var(--text-soft);
+    }
+
+    /* Founder full section */
+    .founder-layout{display:grid;grid-template-columns:1.05fr 1.1fr;gap:24px;align-items:center;}
+    @media(max-width:980px){.founder-layout{grid-template-columns:1fr}}
+    .founder-photo{
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(129,140,248,.9);
+      box-shadow:0 26px 80px rgba(15,23,42,.98);
+      background:#020617;
+      position:relative;
+      isolation:isolate;
+    }
+    .founder-photo img{
+      width:100%;height:100%;object-fit:cover;display:block;
+      filter:saturate(1.1) contrast(1.05);
+    }
+    .founder-photo::after{
       content:"";
-      position:absolute;
-      inset:0;
-      background:url("assets/hex-bar.png") center/cover no-repeat;
-      opacity:.14;
+      position:absolute;inset:0;
+      background:
+        radial-gradient(circle at 0 0,rgba(56,189,248,.35),transparent 55%),
+        linear-gradient(to top,rgba(2,6,23,.96),transparent 45%);
+      mix-blend-mode:screen;
       pointer-events:none;
     }
-    #pricing > .container{position:relative;z-index:1}
+    .founder-tag{
+      position:absolute;left:14px;bottom:14px;
+      padding:6px 10px;border-radius:999px;
+      background:rgba(15,23,42,.96);
+      border:1px solid rgba(148,163,184,.8);
+      font-size:.76rem;color:var(--text-main);
+    }
 
-    /* Testimonials */
-    .quote{font-style:italic; color:#374151}
-    .person{font-weight:700; margin-top:8px}
+    /* Services */
+    .service-card h3{margin:0 0 4px;font-size:.98rem}
+    .service-card p{margin:0 0 8px;font-size:.86rem;color:var(--text-soft)}
+    .service-meta{
+      display:flex;justify-content:space-between;align-items:center;
+      font-size:.76rem;color:var(--text-soft);margin-top:6px;
+    }
+    .chip{
+      padding:3px 8px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.6);
+      font-size:.72rem;color:var(--text-main);
+      background:rgba(15,23,42,.98);
+    }
 
     /* Process */
-    .step{display:flex; gap:14px; align-items:flex-start}
-    .step .num{width:32px; height:32px; border-radius:999px; background:var(--accent); color:#fff; display:grid; place-items:center; font-weight:900}
-
-    /* Form */
-    form input, form textarea, form select{
-      width:100%; padding:12px; border:1px solid #e5e7eb; border-radius:10px; background:#fff; outline:none
+    .process-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:start;}
+    @media(max-width:980px){.process-wrap{grid-template-columns:1fr}}
+    .step{
+      display:flex;gap:12px;align-items:flex-start;
+      padding:9px 10px;border-radius:14px;
+      background:rgba(15,23,42,.96);
+      border:1px solid rgba(51,65,85,.98);
+      margin-bottom:8px;
     }
-    form input:focus, form textarea:focus, form select:focus{border-color:var(--accent); box-shadow:0 0 0 4px var(--ring)}
-    form label{font-weight:700; color:#1f2937; display:block; margin-bottom:6px}
-    form .row{display:grid; gap:16px; grid-template-columns:repeat(2, minmax(0,1fr))}
-    @media(max-width:720px){form .row{grid-template-columns:1fr}}
-    form button{background:var(--accent); color:#fff; border:0; padding:12px 16px; border-radius:10px; font-weight:900; cursor:pointer}
-
-    /* Case layout with art image */
-    .case-layout{
-      display:grid;
-      grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);
-      gap:22px;
-      align-items:stretch;
+    .step-num{
+      width:26px;height:26px;border-radius:999px;
+      background:linear-gradient(135deg,#00e0ff,#a855f7);
+      display:grid;place-items:center;
+      font-size:.78rem;font-weight:800;color:#020617;
+      box-shadow:0 0 0 2px #020617,0 14px 25px rgba(37,99,235,.8);
     }
+    .step h3{margin:0 0 4px;font-size:.9rem}
+    .step p{margin:0;font-size:.84rem;color:var(--text-soft)}
+    .process-note{font-size:.78rem;color:var(--text-soft);margin-top:8px;}
+
+    .stat-counter{display:flex;flex-direction:column;font-size:.8rem;color:var(--text-soft);margin-bottom:7px;}
+    .stat-counter .value{font-size:1.3rem;font-weight:800;color:var(--text-main);}
+    .stat-counter span.label{font-size:.8rem;}
+
+    /* Case studies */
+    .case-layout{display:grid;grid-template-columns:1.05fr 1.1fr;gap:22px;align-items:stretch;}
+    @media(max-width:980px){.case-layout{grid-template-columns:1fr}}
     .case-image-wrap{
-      border-radius:18px;
+      border-radius:22px;
       overflow:hidden;
-      box-shadow:0 18px 44px rgba(0,0,0,.25);
-      background:#000;
+      border:1px solid rgba(129,140,248,.85);
+      box-shadow:0 26px 80px rgba(15,23,42,.98);
+      position:relative;isolation:isolate;
     }
     .case-image-wrap img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
+      width:100%;height:100%;object-fit:cover;display:block;
+      filter:contrast(1.06) saturate(1.05);
     }
-    @media(max-width:900px){
-      .case-layout{grid-template-columns:1fr}
+    .case-image-overlay{
+      position:absolute;inset:0;
+      background:radial-gradient(circle at 10% 10%,rgba(56,189,248,.3),transparent 50%),
+                 linear-gradient(to top,rgba(2,6,23,.96),transparent 45%);
+      mix-blend-mode:screen;pointer-events:none;
+    }
+    .case-tag{
+      position:absolute;left:14px;bottom:14px;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(129,140,248,.85);
+      background:rgba(15,23,42,.96);
+      font-size:.76rem;
     }
 
-    /* Tech section */
-    .tech-layout{
-      display:grid;
-      grid-template-columns:1.1fr 1.1fr;
-      gap:24px;
-      align-items:center;
-    }
+    /* Tech */
+    .tech-wrap{display:grid;grid-template-columns:1.05fr 1.1fr;gap:24px;align-items:center;}
+    @media(max-width:980px){.tech-wrap{grid-template-columns:1fr}}
     .tech-image{
-      border-radius:20px;
+      border-radius:22px;
       overflow:hidden;
-      box-shadow:0 20px 48px rgba(15,23,42,.4);
+      border:1px solid rgba(59,130,246,.9);
+      box-shadow:0 26px 80px rgba(15,23,42,.98);
+      position:relative;isolation:isolate;
     }
     .tech-image img{
-      width:100%;
-      height:100%;
-      display:block;
-      object-fit:cover;
+      width:100%;height:100%;display:block;object-fit:cover;
+      filter:saturate(1.1) contrast(1.08);
     }
-    @media(max-width:900px){
-      .tech-layout{grid-template-columns:1fr}
+    .tech-image::after{
+      content:"";
+      position:absolute;inset:0;
+      background:radial-gradient(circle at 90% 5%,rgba(56,189,248,.35),transparent 65%);
+      mix-blend-mode:screen;pointer-events:none;
     }
+    .stack-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+    .stack-pill{
+      padding:3px 9px;border-radius:999px;
+      border:1px solid rgba(148,163,184,.7);
+      background:rgba(15,23,42,.98);
+      font-size:.75rem;color:var(--text-soft);
+    }
+
+    /* Pricing */
+    #pricing{position:relative;overflow:hidden;}
+    #pricing::before{
+      content:"";position:absolute;inset:0;
+      background:url("assets/hex-bar.png") center/cover no-repeat;
+      opacity:.16;mix-blend-mode:screen;pointer-events:none;
+    }
+    #pricing>.container{position:relative;z-index:1}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
+    @media(max-width:980px){.pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:720px){.pricing-grid{grid-template-columns:1fr}}
+
+    .pricing-card{
+      position:relative;
+      background:linear-gradient(165deg,#020617,#02091f);
+      border-radius:20px;
+      border:1px solid rgba(37,99,235,.9);
+      padding:18px 18px 20px;
+      box-shadow:0 26px 80px rgba(15,23,42,.98);
+    }
+    .pricing-card.recommended{
+      border-color:rgba(34,211,238,1);
+      box-shadow:0 0 0 1px rgba(56,189,248,.75),0 30px 90px rgba(8,47,73,.9);
+    }
+    .pricing-badge{
+      position:absolute;right:14px;top:12px;
+      padding:4px 10px;border-radius:999px;
+      background:linear-gradient(120deg,#00e0ff,#a855f7);
+      color:#020617;font-size:.7rem;font-weight:800;
+      text-transform:uppercase;letter-spacing:.16em;
+    }
+    .pricing-card h3{margin:0 0 4px;font-size:.98rem}
+    .price-line{
+      margin:4px 0 10px;
+      font-size:1.3rem;font-weight:800;color:var(--text-main);
+    }
+    .price-line span{font-size:.8rem;font-weight:500;color:var(--text-soft);}
+    .pricing-card ul{margin:8px 0 0;padding-left:17px;font-size:.82rem;color:var(--text-soft);}
+    .pricing-foot{margin-top:10px;font-size:.78rem;color:var(--text-soft);}
+
+    /* Testimonials */
+    .carousel{position:relative;overflow:hidden}
+    .slides{display:flex;transition:transform .6s ease;will-change:transform;}
+    .slide{min-width:100%;padding:6px 4px;}
+    .quote{font-style:italic;color:var(--text-soft);font-size:.88rem;}
+    .person{font-weight:600;margin-top:6px;font-size:.84rem;}
+    .person span{display:block;font-size:.76rem;color:var(--text-soft);}
+    .dots{display:flex;gap:6px;justify-content:flex-start;margin-top:9px;}
+    .dot{
+      width:8px;height:8px;border-radius:999px;
+      background:#4b5563;border:none;cursor:pointer;
+    }
+    .dot.active{background:#00e0ff;box-shadow:0 0 8px rgba(34,211,238,.9)}
+
+    /* FAQ */
+    .faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+    @media(max-width:880px){.faq-grid{grid-template-columns:1fr}}
+    .faq-item h3{margin:0 0 4px;font-size:.95rem}
+    .faq-item p{margin:0;font-size:.86rem;color:var(--text-soft)}
+
+    /* Intake form */
+    .form-card{
+      background:radial-gradient(circle at top,#02091f,#020617);
+      border-radius:20px;border:1px solid rgba(30,64,175,.8);
+      box-shadow:0 26px 80px rgba(15,23,42,.98);
+      padding:18px 18px 20px;
+    }
+    form label{
+      display:block;margin-bottom:4px;
+      font-size:.82rem;font-weight:600;color:var(--text-main);
+    }
+    form input,form textarea,form select{
+      width:100%;padding:9px 11px;border-radius:10px;
+      border:1px solid rgba(51,65,85,.98);
+      background:rgba(15,23,42,.98);
+      color:var(--text-main);font-size:.85rem;
+      outline:none;
+    }
+    form input::placeholder,form textarea::placeholder{color:#6b7280}
+    form input:focus,form textarea:focus,form select:focus{
+      border-color:#00e0ff;
+      box-shadow:0 0 0 1px rgba(34,211,238,.8),0 0 0 4px rgba(8,47,73,.9);
+    }
+    form .row{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media(max-width:720px){form .row{grid-template-columns:1fr}}
+    form button{
+      background:linear-gradient(135deg,#00e0ff,#22c55e);
+      border:none;border-radius:999px;
+      padding:10px 18px;color:#020617;
+      font-size:.8rem;font-weight:800;
+      text-transform:uppercase;letter-spacing:.16em;
+      cursor:pointer;
+      box-shadow:0 18px 60px rgba(8,47,73,.9);
+    }
+    form button:hover{transform:translateY(-1px);}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:start;}
+    @media(max-width:980px){.contact-grid{grid-template-columns:1fr}}
 
     /* Footer */
-    footer{background:var(--brand); color:#fff; padding:28px 0; margin-top:40px}
-    footer a{color:#9fe7ef}
+    footer{
+      background:#020617;
+      border-top:1px solid rgba(31,41,55,1);
+      padding:18px 0 26px;
+      margin-top:40px;
+      font-size:.8rem;color:var(--text-soft);
+    }
+    footer a{color:var(--text-main)}
 
-    /* Animations */
-    .reveal{opacity:0; transform:translateY(16px); transition:all .6s ease}
-    .reveal.visible{opacity:1; transform:none}
-    .float-cta{position:fixed; right:18px; bottom:18px; z-index:60; background:var(--accent); color:#fff; padding:14px 18px; border-radius:999px; font-weight:900; box-shadow:0 10px 24px rgba(0,0,0,.18);}
-    .float-cta:hover{transform:translateY(-1px)}
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+    .reveal.visible{opacity:1;transform:none;}
 
-    /* Testimonials carousel */
-    .carousel{position:relative; overflow:hidden}
-    .slides{display:flex; transition:transform .6s ease; will-change:transform}
-    .slide{min-width:100%; padding:22px}
-    .carousel .dots{display:flex; gap:8px; justify-content:center; margin-top:10px}
-    .dot{width:10px;height:10px;border-radius:999px;background:#d1d5db;cursor:pointer}
-    .dot.active{background:var(--accent)}
+    /* Floating CTA */
+    .float-cta{
+      position:fixed;right:18px;bottom:18px;z-index:70;
+      padding:10px 15px;border-radius:999px;
+      background:linear-gradient(135deg,#00e0ff,#a855f7);
+      color:#020617;font-size:.74rem;font-weight:800;
+      text-transform:uppercase;letter-spacing:.18em;
+      box-shadow:0 20px 70px rgba(8,47,73,.95);
+    }
+    @media(max-width:640px){
+      .float-cta{right:12px;bottom:12px;padding:9px 13px;font-size:.7rem}
+    }
   </style>
 
   <!-- Google Tag Manager (replace GTM-XXXX with your container ID) -->
@@ -191,63 +669,248 @@
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-XXXX');</script>
-  <!-- End Google Tag Manager -->
 
-  <!-- reCAPTCHA v3 (replace with your site key) -->
+  <!-- reCAPTCHA v3 (replace with your site key if you use it) -->
   <script src="https://www.google.com/recaptcha/api.js?render=RECAPTCHA_V3_SITE_KEY"></script>
-
 </head>
+
 <body>
-  <!-- Google Tag Manager (noscript) -->
+  <!-- GTM noscript -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Topbar / Navigation -->
+  <!-- Topbar -->
   <header class="topbar">
     <div class="container nav">
-      <a class="brand" href="#home" aria-label="Bmorekarefulbilling">
-        <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="44" height="44" rx="10" fill="#0a1a3f"/><path d="M24 10v28M10 24h28" stroke="#00a8b5" stroke-width="4" stroke-linecap="round"/><path d="M15 30h18" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+      <a class="brand" href="#home" aria-label="Bmorekarefulbilling home">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="44" height="44" rx="10" fill="#020617"/><path d="M24 10v28M10 24h28" stroke="#00e0ff" stroke-width="4" stroke-linecap="round"/><path d="M15 30h18" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/></svg>
         <span>Bmorekarefulbilling LLC</span>
       </a>
-      <nav class="links" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#case">Results</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#portal" class="cta">Start Intake</a>
-      </nav>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#why">Why Us</a>
+          <a href="#founder">Founder</a>
+          <a href="#services">Services</a>
+          <a href="#case">Results</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#portal">Client Portal</a>
+        </nav>
+        <a class="nav-cta" href="tel:+14102791464">Call: 410-279-1464</a>
+        <a class="nav-cta nav-cta-primary" href="#portal">Start Intake</a>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero" id="home">
-    <div class="container inner">
+    <div class="hero-glow"></div>
+    <div class="container hero-inner">
       <div>
-        <span class="badge">Precision • Compliance • Results</span>
-        <h1 class="reveal">Medical billing that boosts cash flow & crushes denials</h1>
-        <p class="reveal" style="transition-delay:.1s">Clean claims within 2 business days, proactive payer follow-up, and transparent KPIs every month. We support primary care, behavioral health, dental, PT, and specialty clinics across Maryland and beyond.</p>
-        <div class="actions reveal" style="transition-delay:.2s">
-          <a class="btn primary" href="#portal">Start Intake</a>
-          <a class="btn secondary" href="#case">See Results</a>
+        <div class="hero-tag">
+          Revenue cycle reimagined
+          <span class="highlight">Black-owned • LGBTQ+-led</span>
         </div>
-        <div class="grid cols-2" style="margin-top:24px">
-          <div class="hero-card stat"><b>99%+</b> Claim accuracy</div>
-          <div class="hero-card stat"><b>≤ 2 days</b> Submission speed</div>
+
+        <h1 class="hero-title">
+          Medical billing that <span class="accent">actually gets you paid</span> — not ignored.
+        </h1>
+
+        <div class="hero-rotator">
+          <span class="hero-rotator-dot"></span>
+          <span class="hero-rotator-text" id="hero-rotator-text">
+            We fix what other billing companies ignore.
+          </span>
+        </div>
+
+        <p class="hero-sub">
+          Built for practices tired of excuses. We stabilize your cash flow, crush avoidable denials,
+          and give you monthly KPIs in plain language. You’ll know what went out, what got paid,
+          what’s stuck — and what we’re doing about it.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#portal">Start Intake</a>
+          <a class="btn btn-outline" href="#founder">Meet the Founder</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-chip"><strong>≤ 2 days</strong> Claim submission from complete note</div>
+          <div class="metric-chip"><strong>41%↓</strong> Denials (behavioral health)</div>
+          <div class="metric-chip"><strong>35%↓</strong> A/R &gt;90 days (PT)</div>
         </div>
       </div>
 
-      <div class="hero-media">
-        <div class="hero-media-img reveal" style="transition-delay:.18s">
-          <img src="assets/hero-med-tech.jpg" alt="Digital healthcare and data-driven revenue cycle management" loading="lazy">
+      <div class="hero-right">
+        <div class="hero-frame reveal">
+          <div class="hero-frame-main">
+            <img src="assets/hero-med-tech.jpg" alt="Futuristic digital healthcare and revenue cycle dashboard">
+            <div class="hero-frame-overlay"></div>
+            <div class="hero-chip">
+              <span class="dot"></span>
+              Live payer follow-up in progress
+            </div>
+          </div>
+          <div class="hero-frame-footer">
+            <div class="hero-kpis">
+              <div class="hero-kpi">
+                <label>A/R Days</label><strong>28 → 21</strong>
+              </div>
+              <div class="hero-kpi">
+                <label>First-pass yield</label><strong>97%</strong>
+              </div>
+              <div class="hero-kpi">
+                <label>Denial rate</label><strong>↓ 38%</strong>
+              </div>
+            </div>
+            <div class="hero-status">
+              <span class="dot"></span> Claims queue under control
+            </div>
+          </div>
         </div>
-        <div class="hero-card reveal" style="transition-delay:.28s">
-          <h3 style="margin:6px 0 10px;color:var(--brand)">Why providers choose us</h3>
-          <div class="feature"><div class="icon">✓</div><div>RCM that fits <b>your</b> workflow (Epic, Kareo, Waystar, IDX, etc.).</div></div>
-          <div class="feature"><div class="icon">✓</div><div>Denial prevention with <b>root-cause</b> fixes & appeals.</div></div>
-          <div class="feature"><div class="icon">✓</div><div>HIPAA-aligned controls & secure data practices.</div></div>
-          <div class="feature"><div class="icon">✓</div><div>Monthly KPI report: <em>A/R days, denial rate, net collections</em>.</div></div>
+
+        <!-- Mini Founder card -->
+        <div class="founder-mini reveal">
+          <div class="founder-mini-img">
+            <img src="assets/michael-henderson.jpg" alt="Michael Henderson, Founder of Bmorekarefulbilling">
+          </div>
+          <div class="founder-mini-text">
+            <strong>Michael Henderson, MBA</strong>
+            <span>Your revenue architect & billing specialist</span>
+            <div class="founder-mini-tag">
+              <span>Black-owned • LGBTQ+-led</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI ticker -->
+  <div class="ticker-wrap">
+    <div class="container">
+      <div class="ticker">
+        <div class="ticker-item"><span class="tag">Behavioral Health</span> Denials down 41% in 60 days</div>
+        <div class="ticker-item"><span class="tag">Primary Care</span> First-pass yield at 97%</div>
+        <div class="ticker-item"><span class="tag">Physical Therapy</span> A/R &gt;90 days dropped by 35%</div>
+        <div class="ticker-item"><span class="tag">Response Time</span> New intakes answered within 24 business hours</div>
+        <div class="ticker-item"><span class="tag">Stack</span> Epic • Kareo • Waystar • IDX/GE • More</div>
+
+        <!-- repeat for infinite scroll -->
+        <div class="ticker-item"><span class="tag">Behavioral Health</span> Denials down 41% in 60 days</div>
+        <div class="ticker-item"><span class="tag">Primary Care</span> First-pass yield at 97%</div>
+        <div class="ticker-item"><span class="tag">Physical Therapy</span> A/R &gt;90 days dropped by 35%</div>
+        <div class="ticker-item"><span class="tag">Response Time</span> New intakes answered within 24 business hours</div>
+        <div class="ticker-item"><span class="tag">Stack</span> Epic • Kareo • Waystar • IDX/GE • More</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why us -->
+  <section id="why">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Why providers switch to us</div>
+          <h2 class="section-title">We treat your revenue like it’s ours.</h2>
+        </div>
+        <p class="lead">
+          You’ve probably already tried a generic billing company. Maybe they stopped answering the phone.
+          Maybe you still don’t know where your money is.
+          We combine deep RCM experience with lived perspective — built by a gay Black professional
+          who understands what it means to be underestimated and over-delivering anyway.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="card reveal">
+          <span class="pill-label">Provider-first • No corporate fluff</span>
+          <div class="why-list">
+            <div class="why-item">
+              <div class="why-bullet">1</div>
+              <div>
+                <h3>We don’t just send claims. We stabilize the whole system.</h3>
+                <p>Templates, workflows, authorizations, eligibility — we fix the upstream problems so the same
+                  denial doesn’t hit you twice.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-bullet">2</div>
+              <div>
+                <h3>We speak payer, provider, and patient.</h3>
+                <p>From Medicaid to commercial plans, we understand the rules, loopholes, and documentation traps
+                  that wreck your reimbursement.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="why-bullet">3</div>
+              <div>
+                <h3>You’ll never wonder “what’s going on” again.</h3>
+                <p>Monthly reports: A/R days, denial reasons, payer outliers, and next steps — in clear English,
+                  not clearinghouse jargon.</p>
+              </div>
+            </div>
+          </div>
+          <div class="badge-stack">
+            <span class="badge">Baltimore-based • U.S. operated</span>
+            <span class="badge">Outpatient RCM focus</span>
+            <span class="badge">HIPAA-aligned workflows</span>
+          </div>
+        </div>
+
+        <div class="soft-card reveal">
+          <h3 style="margin:0 0 6px;font-size:1rem;">If this sounds like your reality, we built this for you.</h3>
+          <ul style="margin:8px 0 0;padding-left:17px;font-size:.86rem;color:var(--text-soft);">
+            <li>Your claims sit untouched for days or weeks.</li>
+            <li>You see the same denials from the same payers, over and over.</li>
+            <li>Your billing partner “can’t explain” where the money is.</li>
+            <li>Patients are frustrated and confused by their statements.</li>
+          </ul>
+          <p class="small" style="margin-top:9px;">
+            Bmorekarefulbilling exists so your practice — especially if you’re a minority-owned or mission-driven clinic —
+            can grow with clean, predictable revenue.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder -->
+  <section id="founder">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Founder</div>
+          <h2 class="section-title">Meet Michael — your revenue architect.</h2>
+        </div>
+        <p class="lead">
+          I’m Michael Henderson, MBA — a gay Black billing professional who’s spent years inside real
+          revenue cycle trenches: denials, audits, appeals, Medicaid, Medicare, and every headache you can imagine.
+          I built Bmorekarefulbilling so providers like you never have to chase your own money again.
+        </p>
+      </div>
+
+      <div class="founder-layout">
+        <div class="founder-photo reveal">
+          <img src="assets/michael-henderson.jpg" alt="Michael Henderson, Founder of Bmorekarefulbilling LLC">
+          <div class="founder-tag">Black-owned • LGBTQ+-led • Baltimore, MD</div>
+        </div>
+        <div class="soft-card reveal">
+          <span class="pill-label">Precision • Integrity • Care</span>
+          <p style="margin:10px 0 6px;font-size:.9rem;color:var(--text-soft);">
+            I know what it’s like to be on the phone with payers for hours, fighting for every dollar.
+            I also know what happens when denials aren’t handled well: providers burn out, staff gets frustrated,
+            and patients suffer.
+          </p>
+          <p style="margin:6px 0 6px;font-size:.9rem;color:var(--text-soft);">
+            My promise: when you trust me with your billing, I treat your revenue like it pays my own rent.
+            You get transparency, strategy, and someone who actually cares whether your practice survives and grows.
+          </p>
+
+          <ul style="margin:8px 0 0;padding-left:17px;font-size:.86rem;color:var(--text-soft);">
+            <li>MBA-trained with deep RCM, denial management, and payer-specific expertise.</li>
+            <li>Hands-on experience across hospital systems, outpatient clinics, and behavioral health.</li>
+            <li>Committed to equity — especially for Black, Brown, and underserved communities.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -256,74 +919,183 @@
   <!-- Services -->
   <section id="services">
     <div class="container">
-      <h2 class="reveal">Services</h2>
-      <p class="lead reveal" style="transition-delay:.06s">From clean claim creation to full revenue cycle management, we deliver measurable improvements and peace of mind.</p>
-      <div class="grid cols-3" style="margin-top:14px">
-        <div class="card reveal"><h3>Claim Submission</h3><p>Accurate claims sent within 2 business days of complete documentation. Eligibility, coding checks, and scrubbing included.</p></div>
-        <div class="card reveal" style="transition-delay:.05s"><h3>Denial Management</h3><p>Appeals, root-cause analysis, and payer follow-up to recover revenue and stop repeat denials.</p></div>
-        <div class="card reveal" style="transition-delay:.1s"><h3>Patient Billing</h3><p>Clear statements, timely reminder cadence, and compassionate collections that protect relationships.</p></div>
-        <div class="card reveal" style="transition-delay:.15s"><h3>Full RCM</h3><p>End-to-end posting, reconciliation, and reporting with executive dashboards and monthly reviews.</p></div>
-        <div class="card reveal" style="transition-delay:.2s"><h3>Audit & Compliance</h3><p>Documentation standards, medical necessity checks, and coding audits for accuracy and risk reduction.</p></div>
-        <div class="card reveal" style="transition-delay:.25s"><h3>Analytics</h3><p>Actionable KPIs and cohort analysis to reduce A/R days and improve first-pass yield.</p></div>
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Services</div>
+          <h2 class="section-title">End-to-end revenue cycle. Real-world results.</h2>
+        </div>
+        <p class="lead">
+          From “just send the claims” to “take the whole revenue cycle,” we build a package around your specialty,
+          volume, and payer mix — with clear expectations and no mystery fees.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- Testimonials Carousel -->
-  <section id="testimonials">
-    <div class="container">
-      <h2 class="reveal">What providers say</h2>
-      <div class="card carousel reveal" id="t-carousel">
-        <div class="slides" id="t-slides">
-          <div class="slide">
-            <p class="quote">“They stabilized our cash flow in weeks. First-pass yield is the highest it’s ever been.”</p>
-            <div class="person">Practice Administrator — Primary Care Group</div>
-          </div>
-          <div class="slide">
-            <p class="quote">“Appeals were crisp and fast. Denials fell off a cliff.”</p>
-            <div class="person">Owner — Behavioral Health Clinic</div>
-          </div>
-          <div class="slide">
-            <p class="quote">“Transparent KPIs every month and less time chasing payers.”</p>
-            <div class="person">Director — PT Provider</div>
+      <div class="grid cols-3">
+        <div class="soft-card service-card reveal">
+          <h3>Clean Claim Submission</h3>
+          <p>Claims go out in ≤ 2 business days from complete documentation —
+            with eligibility checks, coding validation, and scrubbing.</p>
+          <div class="service-meta">
+            <span class="chip">≤ 2-day SLA</span><span>Time-based, modifiers, incident-to handled.</span>
           </div>
         </div>
-        <div class="dots" id="t-dots" aria-label="Testimonial navigation"></div>
+        <div class="soft-card service-card reveal">
+          <h3>Denial Management & Appeals</h3>
+          <p>No “light touch.” We attack patterns: tight appeals, logged follow-up,
+            and payer-specific playbooks.</p>
+          <div class="service-meta">
+            <span class="chip">Root-cause focused</span><span>Behavioral health, primary care, PT, dental.</span>
+          </div>
+        </div>
+        <div class="soft-card service-card reveal">
+          <h3>Patient Billing & Statements</h3>
+          <p>Clear language, predictable reminder cadence, and respectful collections that don’t trash relationships.</p>
+          <div class="service-meta">
+            <span class="chip">Compassionate collections</span><span>Balance recovery without chaos.</span>
+          </div>
+        </div>
+        <div class="soft-card service-card reveal">
+          <h3>Full RCM Outsourcing</h3>
+          <p>Submission, posting, reconciliation, denials, and A/R management — with monthly strategy sessions.</p>
+          <div class="service-meta">
+            <span class="chip">Executive dashboards</span><span>Built for growth-minded practices.</span>
+          </div>
+        </div>
+        <div class="soft-card service-card reveal">
+          <h3>Audit & Compliance</h3>
+          <p>Documentation standards, medical necessity checks, internal audits and risk reviews.</p>
+          <div class="service-meta">
+            <span class="chip">Risk reduction</span><span>Great for behavioral health & primary care.</span>
+          </div>
+        </div>
+        <div class="soft-card service-card reveal">
+          <h3>Analytics & KPI Engineering</h3>
+          <p>Views that actually help: payer-level loss, aging by bucket, provider-level trends, cohort analysis.</p>
+          <div class="service-meta">
+            <span class="chip">Actionable analytics</span><span>No more “mystery money.”</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Case Studies / Results + art image -->
+  <!-- Process -->
+  <section id="process">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Onboarding</div>
+          <h2 class="section-title">From “chaos” to “we’re good” in four moves.</h2>
+        </div>
+        <p class="lead">
+          We sprint through onboarding, stabilize your cash flow fast, then refine over time.
+          No endless “setup phase” where nothing gets better.
+        </p>
+      </div>
+
+      <div class="process-wrap">
+        <div class="soft-card reveal">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Intake & stack review</h3>
+              <p>We learn your specialty, volumes, payers, and tech stack (Epic, Kareo, Waystar, IDX/GE, etc.).</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Audit & quick-wins</h3>
+              <p>We sample recent claims and denials, flag avoidable issues, and build your first 30-day win list.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Stabilize submission & A/R</h3>
+              <p>We lock in a 2-day submission rhythm and stand up daily denial and A/R follow-up cadences.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div>
+              <h3>Monthly strategy & KPIs</h3>
+              <p>We review A/R days, denial trends, net collections, and hand you a simple action list.</p>
+            </div>
+          </div>
+          <p class="process-note">
+            You’ll always know: what we did, what moved, and what’s next.
+          </p>
+        </div>
+
+        <div class="soft-card reveal">
+          <div class="stat-counter" data-target="2" data-suffix=" days">
+            <span class="label">Standard submission speed</span><span class="value">0</span>
+          </div>
+          <div class="stat-counter" data-target="41" data-suffix="%↓">
+            <span class="label">Denial reduction (behavioral health)</span><span class="value">0</span>
+          </div>
+          <div class="stat-counter" data-target="97" data-suffix="%">
+            <span class="label">First-pass yield (primary care)</span><span class="value">0</span>
+          </div>
+          <div class="stat-counter" data-target="35" data-suffix="%↓">
+            <span class="label">A/R &gt;90 days reduction</span><span class="value">0</span>
+          </div>
+          <p class="small" style="margin-top:10px;">
+            Numbers based on real client outcomes. Your baselines and targets are set during onboarding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case + art image -->
   <section id="case">
     <div class="container">
-      <h2 class="reveal">Recent Results</h2>
-      <div class="case-layout" style="margin-top:14px">
-        <div class="case-image-wrap reveal">
-          <img src="assets/art-anatomy-flowers.png" alt="Human anatomy with blooming flowers symbolizing healthier revenue outcomes" loading="lazy">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Recent results</div>
+          <h2 class="section-title">What “fixed billing” looks like.</h2>
         </div>
-        <div class="grid cols-3">
-          <div class="card reveal">
+        <p class="lead">
+          Different specialties, same story: leaks, denials, and delays. We don’t just chase fires;
+          we rebuild the system so the fires stop starting.
+        </p>
+      </div>
+
+      <div class="case-layout">
+        <div class="case-image-wrap reveal">
+          <img src="assets/art-anatomy-flowers.png" alt="Human anatomy with flowers symbolizing healed revenue cycle">
+          <div class="case-image-overlay"></div>
+          <div class="case-tag">From broken revenue to breathing room</div>
+        </div>
+
+        <div class="grid">
+          <div class="soft-card reveal">
             <h3>Behavioral Health Clinic</h3>
-            <p class="quote">“Denials dropped 41% in 60 days and cash flow stabilized.”</p>
+            <p class="quote">“Denials dropped 41% in 60 days and cash flow finally stabilized.”</p>
             <ul>
-              <li>Fixed time-based coding usage & auth workflows</li>
-              <li>Appealed legacy denials; added root-cause guardrails</li>
+              <li>Corrected time-based coding and documentation gaps.</li>
+              <li>Re-engineered prior auth and scheduling workflows.</li>
+              <li>Appealed legacy denials and built prevention rules.</li>
             </ul>
           </div>
-          <div class="card reveal" style="transition-delay:.05s">
+          <div class="soft-card reveal">
             <h3>Primary Care Group</h3>
-            <p class="quote">“First-pass yield up to 97% with 2-day submissions.”</p>
+            <p class="quote">“First-pass yield hit 97% with consistent 2-day submissions.”</p>
             <ul>
-              <li>Eligibility & benefits verification automation</li>
-              <li>Cleaner documentation templates + scrubbing</li>
+              <li>Eligibility and benefits verification before visits.</li>
+              <li>Standardized documentation templates by visit type.</li>
+              <li>Clearinghouse scrubbing tuned per payer.</li>
             </ul>
           </div>
-          <div class="card reveal" style="transition-delay:.1s">
-            <h3>PT Provider</h3>
-            <p class="quote">“A/R >90 days cut by 35% in one quarter.”</p>
+          <div class="soft-card reveal">
+            <h3>Physical Therapy Provider</h3>
+            <p class="quote">“A/R &gt;90 days cut by 35% in one quarter.”</p>
             <ul>
-              <li>Improved payer follow-up cadence & tracking</li>
-              <li>Refined appeals package library & timelines</li>
+              <li>Dedicated A/R follow-up queues by payer.</li>
+              <li>Appeals library built for common denial reasons.</li>
+              <li>Weekly huddles to close coding & documentation gaps.</li>
             </ul>
           </div>
         </div>
@@ -331,21 +1103,45 @@
     </div>
   </section>
 
-  <!-- Technology-forward section with doctor & screens -->
+  <!-- Tech -->
   <section id="tech">
     <div class="container">
-      <div class="tech-layout">
-        <div class="card reveal">
-          <h2>Technology-forward revenue cycle</h2>
-          <p>We pair hands-on billing expertise with modern tools—eligibility automation, clearinghouse analytics, and payer-level dashboards—to keep your cash flow predictable.</p>
-          <ul>
-            <li>Real-time visibility into A/R and denial trends</li>
-            <li>Platform experience with Epic, Kareo, Waystar, IDX/GE, and more</li>
-            <li>Executive-ready reporting for partners and investors</li>
-          </ul>
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Tech & workflow</div>
+          <h2 class="section-title">We plug into your stack — and make it work harder.</h2>
         </div>
-        <div class="tech-image reveal" style="transition-delay:.1s">
-          <img src="assets/doctor-holo.jpg" alt="Clinician reviewing advanced medical imaging and analytics dashboards" loading="lazy">
+        <p class="lead">
+          You don’t need yet another platform. You need someone who knows how to use the one you already have,
+          tighten workflows, and surface the right numbers at the right time.
+        </p>
+      </div>
+
+      <div class="tech-wrap">
+        <div class="soft-card reveal">
+          <span class="pill-label">RCM + systems thinking</span>
+          <p style="margin:10px 0 6px;font-size:.9rem;color:var(--text-soft);">
+            We’ve operated inside hospital systems and small outpatient clinics. We understand how your front desk,
+            clinical work, and claims all collide — and where money falls through the cracks.
+          </p>
+          <ul style="margin:8px 0 0;padding-left:17px;font-size:.86rem;color:var(--text-soft);">
+            <li>Eligibility automation, clean registration, and benefit checks.</li>
+            <li>Charge capture aligned with documentation standards.</li>
+            <li>Denial queues tuned to payer behavior and risk tiers.</li>
+            <li>Monthly KPI decks ready for partners, boards, or investors.</li>
+          </ul>
+          <div class="stack-list">
+            <span class="stack-pill">Epic</span>
+            <span class="stack-pill">Kareo</span>
+            <span class="stack-pill">Waystar</span>
+            <span class="stack-pill">IDX / GE</span>
+            <span class="stack-pill">Clearinghouse analytics</span>
+            <span class="stack-pill">Custom reporting</span>
+          </div>
+        </div>
+
+        <div class="tech-image reveal">
+          <img src="assets/doctor-holo.jpg" alt="Clinician reviewing futuristic medical imaging and analytics dashboards">
         </div>
       </div>
     </div>
@@ -354,59 +1150,147 @@
   <!-- Pricing -->
   <section id="pricing">
     <div class="container">
-      <h2 class="reveal">Simple, transparent pricing</h2>
-      <div class="grid cols-3" style="margin-top:14px">
-        <div class="card plan reveal">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Pricing</div>
+          <h2 class="section-title">Clear pricing. No mystery percentages.</h2>
+        </div>
+        <p class="lead">
+          Flat monthly pricing per rendering provider with defined scope. For large groups or complex setups,
+          we can design hybrid or percentage-based models — with everything written down up front.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
           <h3>Starter</h3>
-          <p class="price">$625<span class="small">/mo per provider</span></p>
+          <div class="price-line">$625 <span>/ month per provider</span></div>
           <ul>
-            <li>Claim submission in ≤ 2 days</li>
-            <li>Basic denial follow-up</li>
-            <li>Monthly KPI snapshot</li>
+            <li>Claim submission in ≤ 2 business days.</li>
+            <li>Basic denial follow-up and corrections.</li>
+            <li>Monthly KPI snapshot (A/R days, denials, collections).</li>
           </ul>
+          <div class="pricing-foot">
+            Great for solo providers & very small practices.
+          </div>
         </div>
-        <div class="card plan reveal" style="transition-delay:.06s">
+
+        <div class="pricing-card recommended reveal">
+          <div class="pricing-badge">Most popular</div>
           <h3>Growth</h3>
-          <p class="price">$833<span class="small">/mo per provider</span></p>
+          <div class="price-line">$833 <span>/ month per provider</span></div>
           <ul>
-            <li>Advanced denial management</li>
-            <li>Patient billing & statements</li>
-            <li>KPI + recommendations review</li>
+            <li>Advanced denial management & appeals.</li>
+            <li>Patient billing, statements & reminder cadence.</li>
+            <li>Monthly KPI review with next-step recommendations.</li>
           </ul>
+          <div class="pricing-foot">
+            Best for multi-provider clinics and growing groups.
+          </div>
         </div>
-        <div class="card plan reveal" style="transition-delay:.12s">
+
+        <div class="pricing-card reveal">
           <h3>Pro</h3>
-          <p class="price">$926<span class="small">/mo per provider</span></p>
+          <div class="price-line">$926 <span>/ month per provider</span></div>
           <ul>
-            <li>Full RCM support</li>
-            <li>Appeals & prevention program</li>
-            <li>Custom reports & reviews</li>
+            <li>Full RCM support (submission, posting, A/R, denials).</li>
+            <li>Appeals & denial prevention program.</li>
+            <li>Custom reporting & executive reviews.</li>
           </ul>
+          <div class="pricing-foot">
+            Ideal for complex payer mixes and high volume.
+          </div>
         </div>
       </div>
-      <p class="small reveal" style="margin-top:8px">Need volume pricing or a hybrid percentage model? <a href="#portal" class="btn secondary" style="padding:6px 10px">Get a custom quote</a></p>
+
+      <p class="small" style="margin-top:10px;">
+        Need volume pricing or a hybrid percentage model? <a href="#portal">Submit an intake</a> and select “Custom quote”.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Testimonials</div>
+          <h2 class="section-title">What providers say once the dust settles.</h2>
+        </div>
+        <p class="lead">
+          Names and details masked for privacy — but the results, relief, and respect are real.
+        </p>
+      </div>
+
+      <div class="card carousel reveal">
+        <div class="slides" id="t-slides">
+          <div class="slide">
+            <p class="quote">“Michael stabilized our cash flow in weeks. First-pass yield is the highest it’s ever been and I actually understand our reports now.”</p>
+            <div class="person">Practice Administrator<span>Primary Care Group</span></div>
+          </div>
+          <div class="slide">
+            <p class="quote">“Appeals were crisp, timelines were tight, and denials literally fell off a cliff. I finally stopped dreading payer letters.”</p>
+            <div class="person">Owner<span>Behavioral Health Clinic</span></div>
+          </div>
+          <div class="slide">
+            <p class="quote">“Our A/R over 90 days dropped so fast the partners asked what changed. Short answer: our billing company.”</p>
+            <div class="person">Director<span>Physical Therapy Provider</span></div>
+          </div>
+        </div>
+        <div class="dots" id="t-dots" aria-label="Testimonial navigation"></div>
+      </div>
     </div>
   </section>
 
   <!-- FAQ -->
   <section id="faq">
     <div class="container">
-      <h2 class="reveal">Frequently Asked Questions</h2>
-      <div class="grid cols-2" style="margin-top:14px">
-        <div class="card reveal"><h3>How fast can we start?</h3><p>We can begin onboarding as soon as your intake is received—most providers go live in 5–10 business days.</p></div>
-        <div class="card reveal"><h3>Do you support my EMR/billing system?</h3><p>Yes. We work with Epic, Kareo, Waystar, IDX/GE, and others. Tell us your stack in the intake form.</p></div>
-        <div class="card reveal"><h3>How do you handle PHI?</h3><p>We maintain HIPAA-aligned processes: least-privilege access, audit trails, and encrypted channels.</p></div>
-        <div class="card reveal"><h3>What KPIs do we get?</h3><p>A/R days, net collections, denial rates, first-pass yield, and payer-level drill-downs.</p></div>
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">FAQ</div>
+          <h2 class="section-title">Questions providers ask before they switch.</h2>
+        </div>
+        <p class="lead">
+          No pressure, no games. You should know exactly what you’re signing up for — and what happens if we don’t perform.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="soft-card faq-item reveal">
+          <h3>How fast can we start?</h3>
+          <p>Once your intake is received, we can usually begin onboarding within 5–10 business days, depending on access to your EMR/PM and clearinghouse.</p>
+        </div>
+        <div class="soft-card faq-item reveal">
+          <h3>Do you support my EMR/billing system?</h3>
+          <p>We work with Epic, Kareo, Waystar, IDX/GE, and others. Tell us your stack in the intake form and we’ll confirm fit.</p>
+        </div>
+        <div class="soft-card faq-item reveal">
+          <h3>How do you handle PHI and HIPAA?</h3>
+          <p>Least-privilege access, audit trails, encrypted channels, and written procedures. We treat PHI like it’s ours.</p>
+        </div>
+        <div class="soft-card faq-item reveal">
+          <h3>Is there a long-term contract?</h3>
+          <p>We’ll agree on a minimum term that makes sense for both sides — but the real goal is simple: we want you to stay because the results are undeniable.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Client Portal / Intake Form -->
+  <!-- Client Portal / Intake -->
   <section id="portal">
     <div class="container">
-      <h2 class="reveal">Client Portal – Intake Form</h2>
-      <p class="small reveal">Secure intake for new providers. We respond within 24 hours.</p>
-      <div class="card reveal" style="margin-top:12px">
+      <div class="section-header">
+        <div>
+          <div class="section-kicker">Client portal</div>
+          <h2 class="section-title">Start your intake. Let’s fix this.</h2>
+        </div>
+        <p class="lead">
+          This secure form goes directly to Michael. You’ll get a response within one business day with next steps
+          and a realistic path forward — no copy-paste sales pitch.
+        </p>
+      </div>
+
+      <div class="form-card reveal">
         <form
           id="intake-form"
           method="POST"
@@ -443,7 +1327,7 @@
             <div>
               <label for="specialty">Specialty</label>
               <select id="specialty" name="specialty">
-                <option value="" selected disabled>Select specialty</option>
+                <option value="" disabled selected>Select specialty</option>
                 <option>Primary Care</option>
                 <option>Behavioral Health</option>
                 <option>Dental</option>
@@ -458,34 +1342,45 @@
           </div>
 
           <div>
-            <label for="notes">What services do you need?</label>
-            <textarea id="notes" name="notes" rows="5" placeholder="Claim submission, denial management, RCM, patient billing, etc."></textarea>
+            <label for="notes">What’s going wrong with your billing right now?</label>
+            <textarea id="notes" name="notes" rows="5" placeholder="Tell me about denials, delays, payer issues, and what ‘better’ would look like."></textarea>
           </div>
 
           <div style="margin-top:16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
             <button type="submit">Submit Intake</button>
-            <span class="small">We’ll reply within 24 hours.</span>
+            <span class="small">You’ll hear back from Michael within one business day.</span>
           </div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- Sticky CTA -->
-  <a href="#portal" class="float-cta" aria-label="Start Intake">Start Intake</a>
+  <!-- Floating CTA -->
+  <a href="#portal" class="float-cta" aria-label="Start Intake">Fix My Billing</a>
 
   <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <h2 class="reveal">Contact</h2>
-      <div class="card reveal">
-        <p class="small">Prefer email or phone? Reach us directly.</p>
-        <p><strong>Email:</strong> <a href="mailto:bmorekarefulbill@yahoo.com">bmorekarefulbill@yahoo.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+14102791464">410-279-1464</a></p>
-        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn primary" href="#portal">Start Intake</a>
-          <a class="btn secondary" href="mailto:bmorekarefulbill@yahoo.com?subject=Custom%20Quote%20Request%20—%20Bmorekarefulbilling">Email for Quote</a>
-          <a class="btn secondary" href="tel:+14102791464">Call Now</a>
+      <div class="contact-grid">
+        <div class="soft-card reveal">
+          <h3 style="margin-top:0;">Prefer to talk first?</h3>
+          <p style="font-size:.9rem;color:var(--text-soft);">
+            If you’re not ready to hand over your billing yet, that’s fine.
+            Reach out, tell me what’s going on, and we’ll see if it’s a fit.
+          </p>
+          <p><strong>Email:</strong> <a href="mailto:bmorekarefulbill@yahoo.com">bmorekarefulbill@yahoo.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+14102791464">410-279-1464</a></p>
+          <p class="small">Baltimore, MD • Serving providers across the U.S.</p>
+        </div>
+
+        <div class="soft-card reveal">
+          <span class="pill-label">What you get working with me</span>
+          <ul style="margin:10px 0 0;padding-left:17px;font-size:.86rem;color:var(--text-soft);">
+            <li>Direct communication — you’re not shouting into a ticket system.</li>
+            <li>Honest answers, even when they’re uncomfortable.</li>
+            <li>Strategy that respects your mission, staff, and patients.</li>
+            <li>A partner who understands how identity, equity, and money intersect in healthcare.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -493,74 +1388,113 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container" style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between">
+    <div class="container" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
       <div style="display:flex;align-items:center;gap:10px">
-        <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" style="height:22px;width:22px"><rect x="2" y="2" width="44" height="44" rx="10" fill="#0a1a3f"/><path d="M24 10v28M10 24h28" stroke="#00a8b5" stroke-width="4" stroke-linecap="round"/><path d="M15 30h18" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="height:20px;width:20px"><rect x="2" y="2" width="44" height="44" rx="10" fill="#020617"/><path d="M24 10v28M10 24h28" stroke="#00e0ff" stroke-width="4" stroke-linecap="round"/><path d="M15 30h18" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/></svg>
         <strong>Bmorekarefulbilling LLC</strong>
       </div>
-      <div class="contact-block small">
-        <p>© <span id="year"></span> Bmorekarefulbilling LLC • HIPAA-aligned • Baltimore, MD</p>
+      <div class="small">
+        © <span id="year"></span> Bmorekarefulbilling LLC • Black-owned • LGBTQ+-led • Baltimore, MD
       </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
-    // Intersection Observer reveal animations
+    // Intersection Observer for reveal
     const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} });
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
     }, {threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
-  <!-- Schema: Local Business -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Bmorekarefulbilling LLC",
-    "url": "https://bmorekarefulbill.com/",
-    "address": {"@type":"PostalAddress","addressLocality":"Baltimore","addressRegion":"MD","addressCountry":"US"},
-    "telephone": "+1-410-279-1464",
-    "areaServed": "US",
-    "description": "Medical billing & revenue cycle services for outpatient providers. Clean claims, denial management, analytics.",
-    "founder": "Michael Henderson"
-  }
-  </script>
+    // Hero rotator
+    const heroLines = [
+      "We fix what other billing companies ignore.",
+      "Built for providers who are tired of excuses.",
+      "Black-owned. LGBTQ+-led. Results-driven.",
+      "Billing that respects your time, mission, and money."
+    ];
+    let heroIndex = 0;
+    const heroEl = document.getElementById('hero-rotator-text');
+    function rotateHero(){
+      if(!heroEl) return;
+      heroEl.classList.add('fade-out');
+      setTimeout(()=>{
+        heroIndex = (heroIndex+1)%heroLines.length;
+        heroEl.textContent = heroLines[heroIndex];
+        heroEl.classList.remove('fade-out');
+        heroEl.classList.add('fade-in');
+        setTimeout(()=>heroEl.classList.remove('fade-in'),350);
+      },250);
+    }
+    setInterval(rotateHero,4200);
 
-  <script>
-    // Testimonials carousel logic
+    // Testimonials carousel
     (function(){
       const slides = document.getElementById('t-slides');
       const dotsWrap = document.getElementById('t-dots');
       if(!slides || !dotsWrap) return;
-      const count = slides.children.length; let i=0; let timer;
-      function go(n){ i=(n+count)%count; slides.style.transform=`translateX(-${i*100}%)`; dots(); }
-      function dots(){ dotsWrap.innerHTML=''; for(let k=0;k<count;k++){ const d=document.createElement('button'); d.className='dot'+(k===i?' active':''); d.setAttribute('aria-label','Go to testimonial '+(k+1)); d.onclick=()=>{go(k); reset()}; dotsWrap.appendChild(d);} }
-      function reset(){ clearInterval(timer); timer=setInterval(()=>go(i+1), 5200); }
-      go(0); reset();
+      const count = slides.children.length;
+      let i=0; let timer;
+      function go(n){i=(n+count)%count;slides.style.transform=`translateX(-${i*100}%)`;renderDots();}
+      function renderDots(){
+        dotsWrap.innerHTML='';
+        for(let k=0;k<count;k++){
+          const d=document.createElement('button');
+          d.className='dot'+(k===i?' active':'');
+          d.setAttribute('aria-label','Go to testimonial '+(k+1));
+          d.onclick=()=>{go(k);reset();};
+          dotsWrap.appendChild(d);
+        }
+      }
+      function reset(){clearInterval(timer);timer=setInterval(()=>go(i+1),6500);}
+      go(0);reset();
     })();
 
-    // reCAPTCHA v3 integration (fails open if reCAPTCHA isn't loaded)
+    // Stat counters
+    (function(){
+      const counters = document.querySelectorAll('.stat-counter');
+      if(!counters.length) return;
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){
+            const el = e.target;
+            const valueEl = el.querySelector('.value');
+            const target = Number(el.dataset.target || 0);
+            const suffix = el.dataset.suffix || '';
+            let current = 0;
+            const step = Math.max(1, Math.round(target/40));
+            const intv = setInterval(()=>{
+              current += step;
+              if(current >= target){current = target;clearInterval(intv);}
+              valueEl.textContent = current + suffix;
+            },40);
+            obs.unobserve(el);
+          }
+        });
+      },{threshold:.5});
+      counters.forEach(c=>obs.observe(c));
+    })();
+
+    // reCAPTCHA v3 (fails open if not configured)
     (function(){
       const form = document.getElementById('intake-form');
       if(!form) return;
-
       form.addEventListener('submit', function(e){
-        if (!window.grecaptcha) {
-          // If reCAPTCHA isn't available, just submit normally
-          return;
-        }
-
+        if (!window.grecaptcha) return; // submit as normal
         e.preventDefault();
         grecaptcha.ready(function(){
-          grecaptcha.execute('RECAPTCHA_V3_SITE_KEY', {action: 'submit'}).then(function(token){
+          grecaptcha.execute('RECAPTCHA_V3_SITE_KEY', {action:'submit'}).then(function(token){
             const hidden = document.getElementById('g-recaptcha-response');
             if (hidden) hidden.value = token;
             form.submit();
-          }).catch(function(){
-            form.submit();
-          });
+          }).catch(function(){form.submit();});
         });
       });
     })();
